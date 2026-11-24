@@ -1,17 +1,21 @@
+import { CardRail } from "@/components/CardRail";
 import { Faq } from "@/components/Faq";
-import { FinalCta } from "@/components/FinalCta";
+import { Guide } from "@/components/Guide";
 import { Hero } from "@/components/Hero";
-import { Overview } from "@/components/Overview";
-import { SessionsBand } from "@/components/SessionsBand";
+import { Intro } from "@/components/Intro";
+import { Plan } from "@/components/Plan";
+import { Sessions } from "@/components/Sessions";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <Overview />
-      <SessionsBand />
+      <Intro />
+      <CardRail />
+      <Guide />
+      <Plan />
+      <Sessions />
       <Faq />
-      <FinalCta />
     </main>
   );
 }

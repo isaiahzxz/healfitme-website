@@ -1,13 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { DM_Sans } from "next/font/google";
+import { Inter_Tight } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
 import "./globals.css";
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
+const font = Inter_Tight({
+  variable: "--font-main",
   subsets: ["latin"],
-  axes: ["opsz"],
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://healfitme.com";
@@ -31,7 +30,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={dmSans.variable}>
+    <html lang="en" className={font.variable}>
       <body className="min-h-screen">
         <Nav />
         {children}

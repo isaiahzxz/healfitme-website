@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { ArrowLink } from "@/components/ArrowLink";
-import { FinalCta } from "@/components/FinalCta";
 import { PageHero } from "@/components/PageHero";
 import { Phone } from "@/components/Phone";
 import { CheckInDemo } from "@/components/product/CheckInDemo";
@@ -177,7 +176,6 @@ export default function ProductPage() {
         </Reveal>
       </section>
 
-      <FinalCta />
     </main>
   );
 }

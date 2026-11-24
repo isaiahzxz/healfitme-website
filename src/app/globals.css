@@ -29,7 +29,7 @@
   --color-butter: var(--butter);
   --color-navy: var(--navy);
   --color-navy-2: var(--navy-2);
-  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-main), ui-sans-serif, system-ui, sans-serif;
 }
 
 html {
@@ -44,9 +44,9 @@ body {
 }
 
 .display {
-  font-weight: 430;
-  letter-spacing: -0.028em;
-  line-height: 1.02;
+  font-weight: 360;
+  letter-spacing: -0.03em;
+  line-height: 1.04;
 }
 
 /* ---------- Animations (ported from the Lovable prototype) ---------- */

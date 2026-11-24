@@ -62,7 +62,7 @@ export function WaitlistForm({
     return (
       <div
         role="status"
-        className="unlock-pop rounded-[28px] bg-white/95 px-8 py-7 text-left text-ink shadow-xl"
+        className="unlock-pop rounded-[20px] bg-white/95 px-8 py-7 text-left text-ink shadow-xl"
       >
         <p className="text-2xl font-medium tracking-tight">
           {state.duplicate ? "You're already on the list" : "You're on the list"}
@@ -87,7 +87,7 @@ export function WaitlistForm({
   );
   const error =
     state.kind === "error" ? (
-      <p role="alert" className="mt-3 text-center text-[14px] font-medium text-[#b3261e]">
+      <p role="alert" className="mt-3 text-center text-[14px] font-medium text-[#ffb4ab]">
         {state.message}
       </p>
     ) : null;
@@ -95,7 +95,7 @@ export function WaitlistForm({
   if (variant === "inline") {
     return (
       <form onSubmit={onSubmit} noValidate className="relative w-full max-w-[520px]">
-        <div className="flex items-center gap-2 rounded-full bg-white p-1.5 shadow-[0_20px_50px_-20px_rgba(15,26,56,0.5)]">
+        <div className="flex items-center gap-2 rounded-[16px] bg-white/95 p-1.5">
           <label className="min-w-0 flex-1">
             <span className="sr-only">Email address</span>
             <input
@@ -111,7 +111,7 @@ export function WaitlistForm({
           <button
             type="submit"
             disabled={busy}
-            className="shrink-0 whitespace-nowrap rounded-full bg-navy px-5 py-3 text-[15px] font-medium text-white transition hover:bg-navy-2 disabled:opacity-60 sm:px-6"
+            className="shrink-0 whitespace-nowrap rounded-[12px] bg-black px-5 py-3 text-[15px] font-medium text-white transition hover:bg-navy-2 disabled:opacity-60 sm:px-6"
           >
             {busy ? "Joining..." : "Join the waitlist"}
           </button>
@@ -123,7 +123,7 @@ export function WaitlistForm({
   }
 
   const field =
-    "w-full rounded-2xl border border-ink/10 bg-white px-5 py-4 text-[16px] text-ink placeholder:text-ink-soft/70 focus:border-blue-deep focus:outline-none";
+    "w-full rounded-[14px] border border-white/20 bg-white/95 px-5 py-4 text-[16px] text-ink placeholder:text-ink-soft/70 focus:border-white focus:outline-none";
 
   return (
     <form onSubmit={onSubmit} noValidate className="relative space-y-3 text-left">
@@ -166,7 +166,7 @@ export function WaitlistForm({
       <button
         type="submit"
         disabled={busy}
-        className="w-full rounded-full bg-navy px-8 py-4 text-[16px] font-medium text-white transition hover:bg-navy-2 disabled:opacity-60"
+        className="w-full rounded-[14px] bg-white px-8 py-4 text-[16px] font-medium text-ink transition hover:bg-sky-2 disabled:opacity-60"
       >
         {busy ? "Joining..." : "Join the waitlist"}
       </button>

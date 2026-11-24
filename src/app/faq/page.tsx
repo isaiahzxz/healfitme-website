@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { ArrowLink } from "@/components/ArrowLink";
 import { FaqExplorer } from "@/components/faq/FaqExplorer";
-import { FinalCta } from "@/components/FinalCta";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { FAQS } from "@/lib/faq";
@@ -59,7 +58,6 @@ export default function FaqPage() {
         </Reveal>
       </section>
 
-      <FinalCta />
     </main>
   );
 }

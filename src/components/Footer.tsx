@@ -1,5 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Logo } from "./Logo";
+import { Reveal } from "./Reveal";
+import { WaitlistForm } from "./WaitlistForm";
 
 async function currentYear() {
   "use cache";
@@ -9,44 +12,49 @@ async function currentYear() {
 export async function Footer() {
   const year = await currentYear();
   return (
-    <footer className="bg-white px-6 pb-10 pt-20">
-      <div className="mx-auto max-w-6xl">
-        <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr]">
-          <div>
-            <Logo className="h-7" />
-            <p className="mt-4 max-w-xs text-[15px] text-ink-soft">
-              Recovery guidance from your health and activity data.
-            </p>
-            <a
-              href="#waitlist"
-              className="mt-6 inline-block rounded-full bg-navy px-6 py-3 text-[14px] font-medium text-white transition hover:bg-navy-2"
-            >
-              Join the waitlist
-            </a>
+    <footer id="waitlist" className="relative isolate overflow-hidden bg-navy text-white">
+      <Image src="/images/reset.webp" alt="" fill sizes="100vw" className="-z-20 object-cover" />
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(15,26,56,0.55)_0%,rgba(15,26,56,0.7)_55%,rgba(15,26,56,0.92)_100%)]" />
+
+      <div className="mx-auto flex min-h-[900px] max-w-[1200px] flex-col justify-end px-6 pb-8 pt-40">
+        <Reveal>
+          <h2 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.95]">Join the waitlist</h2>
+          <p className="mt-5 max-w-md text-[18px] text-white/85">
+            We will email you when early access opens.
+          </p>
+          <div className="mt-8 max-w-xl">
+            <WaitlistForm variant="full" source="footer" />
+            <p className="mt-4 text-[13px] text-white/70">We will only email you about HealFitMe.</p>
           </div>
+        </Reveal>
 
-          <nav aria-label="Product">
-            <p className="text-[12px] uppercase tracking-[0.16em] text-ink-soft">Product</p>
-            <ul className="mt-4 space-y-3 text-[15px]">
-              <li><Link href="/product" className="hover:text-blue-deep">The app</Link></li>
-              <li><Link href="/coaches" className="hover:text-blue-deep">Coaches</Link></li>
-              <li><Link href="/faq" className="hover:text-blue-deep">FAQ</Link></li>
-              <li><a href="#waitlist" className="hover:text-blue-deep">Waitlist</a></li>
+        <div className="mt-24 grid gap-12 md:grid-cols-[1fr_1fr_1fr_1.2fr]">
+          <nav aria-label="Learn">
+            <p className="text-[26px] tracking-tight">Learn</p>
+            <ul className="mt-4 space-y-2.5 text-[15px] text-white/85">
+              <li><Link href="/product" className="hover:text-white">The app</Link></li>
+              <li><Link href="/coaches" className="hover:text-white">Coaches</Link></li>
+              <li><Link href="/faq" className="hover:text-white">FAQ</Link></li>
             </ul>
           </nav>
-
-          <nav aria-label="Legal">
-            <p className="text-[12px] uppercase tracking-[0.16em] text-ink-soft">Company</p>
-            <ul className="mt-4 space-y-3 text-[15px]">
-              <li><Link href="/privacy" className="hover:text-blue-deep">Privacy</Link></li>
-              <li><Link href="/terms" className="hover:text-blue-deep">Terms</Link></li>
+          <nav aria-label="Company">
+            <p className="text-[26px] tracking-tight">Company</p>
+            <ul className="mt-4 space-y-2.5 text-[15px] text-white/85">
+              <li><Link href="/privacy" className="hover:text-white">Privacy</Link></li>
+              <li><Link href="/terms" className="hover:text-white">Terms</Link></li>
+              <li><a href="#waitlist" className="hover:text-white">Waitlist</a></li>
             </ul>
           </nav>
+          <div />
+          <div className="md:justify-self-end md:text-right">
+            <Logo light className="h-7 md:ml-auto" />
+            <p className="mt-4 text-[15px] text-white/80">Not yet available. Planned for iPhone and Android</p>
+          </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-3 border-t border-ink/10 pt-6 text-[13px] text-ink-soft md:flex-row md:justify-between">
+        <div className="mt-12 flex flex-col gap-2 text-[11px] uppercase tracking-[0.08em] text-white/60 md:flex-row md:justify-between">
           <p>&copy; {year} HealFitMe. All rights reserved.</p>
-          <p>HealFitMe is a wellness tool and does not provide medical advice.</p>
+          <p className="normal-case tracking-normal">HealFitMe is a wellness tool and does not provide medical advice.</p>
         </div>
       </div>
     </footer>
