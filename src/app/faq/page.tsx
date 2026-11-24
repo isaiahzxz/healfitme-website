@@ -33,15 +33,12 @@ export default function FaqPage() {
 
       <PageHero
         align="center"
-        eyebrow="FAQ"
         title={
           <>
-            Questions,
-            <br />
-            <span className="text-sky">answered.</span>
+            Frequently asked questions
           </>
         }
-        body="Everything we can tell you about HealFitMe right now, and honest notes on what we haven't decided yet."
+        body="What we can tell you about HealFitMe today, including what we have not decided yet."
       />
 
       <section className="bg-white px-6 py-20 md:py-28">

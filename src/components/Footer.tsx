@@ -15,7 +15,7 @@ export async function Footer() {
           <div>
             <Logo className="h-7" />
             <p className="mt-4 max-w-xs text-[15px] text-ink-soft">
-              Recovery, made personal. Know what your body needs today, and what to do next.
+              Recovery guidance from your health and activity data.
             </p>
             <a
               href="#waitlist"

@@ -13,9 +13,7 @@ export function Faq() {
       <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[1fr_1.6fr]">
         <Reveal>
           <h2 className="display text-[clamp(2.2rem,5vw,3.75rem)]">
-            Questions,
-            <br />
-            <span className="text-blue-deep">answered.</span>
+            Common questions
           </h2>
           <div className="mt-8">
             <ArrowLink href="/faq">See every question</ArrowLink>
@@ -29,7 +27,7 @@ export function Faq() {
                   {f.q}
                   <span
                     aria-hidden="true"
-                    className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-sky-2 text-xl text-blue-deep transition duration-300 group-open:rotate-45 group-open:bg-navy group-open:text-white"
+                    className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-sky-2 text-xl text-ink transition duration-300 group-open:rotate-45 group-open:bg-navy group-open:text-white"
                   >
                     +
                   </span>

@@ -56,18 +56,15 @@ export default function CoachesPage() {
   return (
     <main>
       <PageHero
-        eyebrow="Coaches"
         title={
           <>
-            Real guidance.
-            <br />
-            <span className="text-sky">A human touch.</span>
+            Guided sessions with real coaches
           </>
         }
-        body="You won't have to figure it all out alone. The app reads the data. Coaches turn it into something you can feel: short guided sessions that make space for your body."
+        body="The app works out how recovered you are. Coaches lead short guided sessions, such as mobility and breathing, to act on it. Coaches have not been announced yet."
       >
         <div className="phone-enter mx-auto w-full max-w-sm" style={{ ["--tilt" as string]: "-2deg" }}>
-          <div className="float-y rounded-[36px] bg-white/10 p-4 ring-1 ring-white/20 backdrop-blur-xl">
+          <div className="rounded-[36px] bg-white/10 p-4 ring-1 ring-white/20 ">
             <div className="relative isolate grid aspect-square place-items-center overflow-hidden rounded-[28px] bg-navy">
               <Image src="/images/reset.webp" alt="" fill preload sizes="384px" className="-z-20 object-cover" />
               <span aria-hidden="true" className="absolute inset-0 -z-10 bg-[linear-gradient(160deg,rgba(63,107,208,0.5)_0%,rgba(15,26,56,0.5)_100%)]" />
@@ -94,15 +91,11 @@ export default function CoachesPage() {
       <section className="sky-gradient relative overflow-clip px-6 py-24 md:py-32">
         <div className="mx-auto max-w-6xl">
           <Reveal className="max-w-2xl">
-            <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-blue-deep">
-              Guided sessions
-            </p>
-            <h2 className="display mt-4 text-[clamp(2.2rem,5.5vw,4.25rem)]">
-              Short enough for a real day.
+            <h2 className="display text-[clamp(2rem,4.2vw,3.25rem)]">
+              Example sessions
             </h2>
             <p className="mt-5 text-lg text-ink-soft">
-              A gentle mobility session. A moment to breathe. Pick a type and tap play
-              for a taste of how sessions will feel.
+              Pick a session type and press play to see how sessions will work. These are demos, not real recordings.
             </p>
           </Reveal>
           <Reveal delay={100} className="mt-12">
@@ -115,13 +108,8 @@ export default function CoachesPage() {
       <section className="bg-white px-6 py-24 md:py-32">
         <div className="mx-auto max-w-6xl">
           <Reveal className="max-w-2xl">
-            <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-blue-deep">
-              Where coaches fit
-            </p>
-            <h2 className="display mt-4 text-[clamp(2.2rem,5vw,4rem)]">
-              The app sets the plan.
-              <br />
-              <span className="text-blue-deep">Coaches guide you.</span>
+            <h2 className="display text-[clamp(2rem,4.2vw,3.25rem)]">
+              How coaches fit in
             </h2>
           </Reveal>
 
@@ -152,24 +140,15 @@ export default function CoachesPage() {
 
       {/* Is / isn't */}
       <section className="relative isolate overflow-hidden bg-navy px-6 py-24 text-white md:py-32">
-        <div
-          aria-hidden="true"
-          className="drift absolute -right-32 top-0 -z-10 h-[460px] w-[620px] rounded-full bg-blue/25 blur-[120px]"
-        />
         <div className="mx-auto max-w-6xl">
           <Reveal className="max-w-2xl">
-            <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-sky/80">
-              Straight answers
-            </p>
-            <h2 className="display mt-4 text-[clamp(2.2rem,5vw,4rem)]">
-              What a coach is,
-              <br />
-              <span className="text-sky">and isn&apos;t.</span>
+            <h2 className="display text-[clamp(2rem,4.2vw,3.25rem)]">
+              What coaches do and don&apos;t do
             </h2>
           </Reveal>
           <div className="mt-14 grid gap-5 md:grid-cols-2">
             <Reveal>
-              <div className="h-full rounded-[32px] bg-white/10 p-8 ring-1 ring-white/15 backdrop-blur md:p-10">
+              <div className="h-full rounded-[32px] bg-white/10 p-8 ring-1 ring-white/15 md:p-10">
                 <p className="text-[13px] font-medium uppercase tracking-[0.16em] text-sky">
                   A coach is
                 </p>
@@ -210,15 +189,11 @@ export default function CoachesPage() {
       <section className="bg-mist px-6 py-24 md:py-32">
         <div className="mx-auto max-w-6xl">
           <Reveal className="max-w-2xl">
-            <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-blue-deep">
-              Meet the coaches
-            </p>
-            <h2 className="display mt-4 text-[clamp(2.2rem,5vw,4rem)]">
-              Introductions are coming.
+            <h2 className="display text-[clamp(2rem,4.2vw,3.25rem)]">
+              Coaches
             </h2>
             <p className="mt-5 text-lg text-ink-soft">
-              We are still building the team. Waitlist members will meet the coaches
-              first, before anyone else.
+              We have not announced the coaches yet. People on the waitlist will hear first.
             </p>
           </Reveal>
           <div className="mt-12 grid gap-5 md:grid-cols-3">

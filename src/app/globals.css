@@ -142,10 +142,7 @@ body {
 }
 
 .sky-gradient {
-  background:
-    radial-gradient(70% 60% at 85% 10%, rgba(217, 214, 243, 0.9) 0%, transparent 70%),
-    radial-gradient(60% 70% at 5% 90%, rgba(111, 154, 230, 0.55) 0%, transparent 70%),
-    linear-gradient(180deg, #c3d6f6 0%, #dce7fb 100%);
+  background: #e9f0fc;
 }
 
 @media (prefers-reduced-motion: reduce) {

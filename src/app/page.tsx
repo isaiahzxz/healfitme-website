@@ -1,17 +1,15 @@
 import { Faq } from "@/components/Faq";
-import { Features } from "@/components/Features";
 import { FinalCta } from "@/components/FinalCta";
 import { Hero } from "@/components/Hero";
-import { Plan } from "@/components/Plan";
-import { Story } from "@/components/Story";
+import { Overview } from "@/components/Overview";
+import { SessionsBand } from "@/components/SessionsBand";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <Features />
-      <Story />
-      <Plan />
+      <Overview />
+      <SessionsBand />
       <Faq />
       <FinalCta />
     </main>
