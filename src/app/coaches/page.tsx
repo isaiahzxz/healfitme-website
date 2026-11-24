@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import { ArrowLink } from "@/components/ArrowLink";
 import { FinalCta } from "@/components/FinalCta";
@@ -67,13 +68,11 @@ export default function CoachesPage() {
       >
         <div className="phone-enter mx-auto w-full max-w-sm" style={{ ["--tilt" as string]: "-2deg" }}>
           <div className="float-y rounded-[36px] bg-white/10 p-4 ring-1 ring-white/20 backdrop-blur-xl">
-            <div className="relative grid aspect-square place-items-center overflow-hidden rounded-[28px] bg-[linear-gradient(145deg,#3f6bd0_0%,#6f9ae6_55%,#c3d6f6_100%)]">
-              <span aria-hidden="true" className="breathe absolute h-64 w-64 rounded-full bg-white/30" />
-              <span
-                aria-hidden="true"
-                className="breathe absolute h-44 w-44 rounded-full bg-white/45"
-                style={{ animationDelay: "0.25s" }}
-              />
+            <div className="relative isolate grid aspect-square place-items-center overflow-hidden rounded-[28px] bg-navy">
+              <Image src="/images/reset.webp" alt="" fill preload sizes="384px" className="-z-20 object-cover" />
+              <span aria-hidden="true" className="absolute inset-0 -z-10 bg-[linear-gradient(160deg,rgba(63,107,208,0.5)_0%,rgba(15,26,56,0.5)_100%)]" />
+              <span aria-hidden="true" className="breathe absolute h-56 w-56 rounded-full bg-white/25" />
+              <span aria-hidden="true" className="breathe absolute h-36 w-36 rounded-full bg-white/40" style={{ animationDelay: "0.25s" }} />
               <span className="relative grid h-16 w-16 place-items-center rounded-full bg-white text-navy shadow-xl">
                 <svg width="20" height="20" viewBox="0 0 22 22" fill="currentColor" aria-hidden="true">
                   <path d="M6 3.5v15l13-7.5z" />
@@ -223,15 +222,18 @@ export default function CoachesPage() {
             </p>
           </Reveal>
           <div className="mt-12 grid gap-5 md:grid-cols-3">
-            {["Coach one", "Coach two", "Coach three"].map((n, i) => (
+            {[
+              { n: "Mobility coach", img: "/images/coach-mobility.webp", pos: "50% 30%" },
+              { n: "Breathing coach", img: "/images/coach-breath.webp", pos: "50% 40%" },
+              { n: "Guided reset coach", img: "/images/coach-reset.webp", pos: "50% 50%" },
+            ].map(({ n, img, pos }, i) => (
               <Reveal key={n} delay={i * 100}>
                 <div className="rounded-[32px] bg-white p-6 ring-1 ring-ink/5">
-                  <div
-                    aria-hidden="true"
-                    className="shimmer aspect-[4/3] rounded-3xl bg-[linear-gradient(110deg,#dce7fb_30%,#f5f8fe_50%,#dce7fb_70%)]"
-                  />
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-sky-2">
+                    <Image src={img} alt="" fill sizes="(min-width: 768px) 360px, 100vw" className="object-cover" style={{ objectPosition: pos }} />
+                  </div>
                   <p className="mt-5 text-[20px] font-medium tracking-tight">{n}</p>
-                  <p className="text-ink-soft">To be announced</p>
+                  <p className="text-ink-soft">To be announced &middot; stock photo</p>
                 </div>
               </Reveal>
             ))}

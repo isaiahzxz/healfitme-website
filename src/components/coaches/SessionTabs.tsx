@@ -1,10 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const SESSIONS = [
   {
     id: "mobility",
+    image: "/images/mobility.webp",
     tab: "Mobility",
     title: "8 minutes of gentle hip mobility",
     minutes: 8,
@@ -14,6 +16,7 @@ const SESSIONS = [
   },
   {
     id: "breathing",
+    image: "/images/breathing.webp",
     tab: "Breathing",
     title: "A 5-minute breathing reset",
     minutes: 5,
@@ -23,6 +26,7 @@ const SESSIONS = [
   },
   {
     id: "reset",
+    image: "/images/reset.webp",
     tab: "Guided reset",
     title: "A 12-minute guided reset",
     minutes: 12,
@@ -89,8 +93,15 @@ export function SessionTabs() {
         className="unlock-pop mt-6 grid overflow-hidden rounded-[36px] bg-white shadow-[0_40px_90px_-45px_rgba(15,26,56,0.45)] ring-1 ring-ink/5 md:grid-cols-[1.1fr_1fr]"
       >
         {/* Player */}
-        <div className="relative isolate grid min-h-[340px] place-items-center overflow-hidden bg-[linear-gradient(145deg,#3f6bd0_0%,#6f9ae6_55%,#c3d6f6_100%)] p-8">
-          <div aria-hidden="true" className="absolute inset-0 -z-10 opacity-40 [background:radial-gradient(60%_60%_at_30%_20%,white,transparent)]" />
+        <div className="relative isolate grid min-h-[340px] place-items-center overflow-hidden bg-navy p-8">
+          <Image
+            src={s.image}
+            alt=""
+            fill
+            sizes="(min-width: 768px) 560px, 100vw"
+            className="-z-20 object-cover"
+          />
+          <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[linear-gradient(160deg,rgba(63,107,208,0.55)_0%,rgba(15,26,56,0.55)_100%)]" />
           <div className="relative grid h-52 w-52 place-items-center">
             <span
               aria-hidden="true"
@@ -124,7 +135,7 @@ export function SessionTabs() {
           </div>
 
           <div className="absolute inset-x-6 bottom-6">
-            <p className="text-center text-[14px] font-medium text-white" aria-live="polite">
+            <p className="text-center text-[14px] font-medium text-white drop-shadow" aria-live="polite">
               {playing || progress > 0 ? s.steps[stepIndex] : "Tap play for a taste"}
             </p>
             <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-white/30">
