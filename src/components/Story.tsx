@@ -56,9 +56,9 @@ export function Story() {
             A preview of your everyday
           </p>
           <h2 className="display mt-4 text-[clamp(2.2rem,5.5vw,4.25rem)]">
-            Three small steps.
+            Your day,
             <br />
-            One clearer day.
+            in one glance.
           </h2>
         </div>
 

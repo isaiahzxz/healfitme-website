@@ -24,13 +24,13 @@ export async function Footer() {
             </a>
           </div>
 
-          <nav aria-label="Explore">
-            <p className="text-[12px] uppercase tracking-[0.16em] text-ink-soft">Explore</p>
+          <nav aria-label="Product">
+            <p className="text-[12px] uppercase tracking-[0.16em] text-ink-soft">Product</p>
             <ul className="mt-4 space-y-3 text-[15px]">
-              <li><a href="#story" className="hover:text-blue-deep">How it works</a></li>
-              <li><a href="#features" className="hover:text-blue-deep">What&apos;s inside</a></li>
-              <li><a href="#plan" className="hover:text-blue-deep">Your plan</a></li>
+              <li><a href="#story" className="hover:text-blue-deep">The app</a></li>
+              <li><a href="#coaches" className="hover:text-blue-deep">Coaches</a></li>
               <li><a href="#faq" className="hover:text-blue-deep">FAQ</a></li>
+              <li><a href="#waitlist" className="hover:text-blue-deep">Waitlist</a></li>
             </ul>
           </nav>
 

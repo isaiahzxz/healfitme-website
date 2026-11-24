@@ -208,15 +208,20 @@ function Card({
   body,
   children,
   delay,
+  id,
 }: {
   title: string;
   body: string;
   children: ReactNode;
   delay: number;
+  id?: string;
 }) {
   return (
     <Reveal delay={delay}>
-      <article className="flex h-full flex-col overflow-hidden rounded-[32px] bg-mist ring-1 ring-ink/5">
+      <article
+        id={id}
+        className="flex h-full scroll-mt-28 flex-col overflow-hidden rounded-[32px] bg-mist ring-1 ring-ink/5"
+      >
         <div className="p-8 pb-0 md:p-10 md:pb-0">
           <h3 className="text-[clamp(1.6rem,3vw,2.25rem)] font-medium leading-[1.05] tracking-[-0.03em]">
             {title}
@@ -286,6 +291,7 @@ export function Features() {
             <CheckIn />
           </Card>
           <Card
+            id="coaches"
             delay={100}
             title="Real guidance. A human touch."
             body="You won't have to figure it all out alone. Guided recovery sessions from real coaches help you make space for your body."
