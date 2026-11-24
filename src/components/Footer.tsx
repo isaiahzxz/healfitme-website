@@ -48,7 +48,7 @@ export async function Footer() {
           <div />
           <div className="md:justify-self-end md:text-right">
             <Logo light className="h-7 md:ml-auto" />
-            <p className="mt-4 text-[15px] text-white/80">Not yet available. Planned for iPhone and Android</p>
+            <p className="mt-4 text-[15px] text-white/80">Coming soon to iOS.</p>
           </div>
         </div>
 
