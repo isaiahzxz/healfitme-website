@@ -10,7 +10,7 @@ export default function Privacy() {
         &larr; Back to HealFitMe
       </Link>
       <h1 className="display mt-8 text-5xl">Privacy</h1>
-      <p className="mt-6 rounded-2xl bg-sand p-4 text-sm text-ink-soft">
+      <p className="mt-6 rounded-2xl bg-mist p-4 text-sm text-ink-soft">
         Draft placeholder. Replace with a policy reviewed by a lawyer before launch.
       </p>
       <h2 className="mt-10 text-xl font-medium">Waitlist</h2>

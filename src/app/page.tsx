@@ -1,12 +1,11 @@
-import { CoachCheckIn, Profile } from "@/components/CoachAndProfile";
 import { Faq } from "@/components/Faq";
 import { Features } from "@/components/Features";
+import { FinalCta } from "@/components/FinalCta";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
-import { Beyond, HowItWorks } from "@/components/HowItWorks";
-import { Intro } from "@/components/Intro";
 import { Nav } from "@/components/Nav";
-import { Waitlist } from "@/components/Waitlist";
+import { Plan } from "@/components/Plan";
+import { Story } from "@/components/Story";
 
 export default function Home() {
   return (
@@ -14,14 +13,11 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <Intro />
-        <HowItWorks />
         <Features />
-        <CoachCheckIn />
-        <Profile />
-        <Beyond />
+        <Story />
+        <Plan />
         <Faq />
-        <Waitlist />
+        <FinalCta />
       </main>
       <Footer />
     </>

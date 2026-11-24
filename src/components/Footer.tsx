@@ -8,42 +8,42 @@ async function currentYear() {
 export async function Footer() {
   const year = await currentYear();
   return (
-    <footer className="bg-evergreen px-6 pb-10 pt-16 text-white">
+    <footer className="bg-white px-6 pb-10 pt-20">
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
+        <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr]">
           <div>
-            <Logo />
-            <p className="mt-4 max-w-xs text-[15px] text-white/65">
-              AI-powered recovery. Know where you are, and exactly what to do next.
+            <Logo className="h-7" />
+            <p className="mt-4 max-w-xs text-[15px] text-ink-soft">
+              Recovery, made personal. Know what your body needs today, and what to do next.
             </p>
             <a
               href="#waitlist"
-              className="mt-6 inline-block rounded-full bg-white px-6 py-3 text-[14px] font-medium text-ink transition hover:bg-mint"
+              className="mt-6 inline-block rounded-full bg-navy px-6 py-3 text-[14px] font-medium text-white transition hover:bg-navy-2"
             >
               Join the waitlist
             </a>
           </div>
 
-          <nav aria-label="Learn">
-            <p className="text-[12px] uppercase tracking-[0.16em] text-white/50">Learn</p>
+          <nav aria-label="Explore">
+            <p className="text-[12px] uppercase tracking-[0.16em] text-ink-soft">Explore</p>
             <ul className="mt-4 space-y-3 text-[15px]">
-              <li><a href="#how" className="text-white/80 hover:text-white">How it works</a></li>
-              <li><a href="#features" className="text-white/80 hover:text-white">Features</a></li>
-              <li><a href="#coaches" className="text-white/80 hover:text-white">Coaches</a></li>
-              <li><a href="#faq" className="text-white/80 hover:text-white">FAQ</a></li>
+              <li><a href="#story" className="hover:text-blue-deep">How it works</a></li>
+              <li><a href="#features" className="hover:text-blue-deep">What&apos;s inside</a></li>
+              <li><a href="#plan" className="hover:text-blue-deep">Your plan</a></li>
+              <li><a href="#faq" className="hover:text-blue-deep">FAQ</a></li>
             </ul>
           </nav>
 
           <nav aria-label="Legal">
-            <p className="text-[12px] uppercase tracking-[0.16em] text-white/50">Company</p>
+            <p className="text-[12px] uppercase tracking-[0.16em] text-ink-soft">Company</p>
             <ul className="mt-4 space-y-3 text-[15px]">
-              <li><a href="/privacy" className="text-white/80 hover:text-white">Privacy</a></li>
-              <li><a href="/terms" className="text-white/80 hover:text-white">Terms</a></li>
+              <li><a href="/privacy" className="hover:text-blue-deep">Privacy</a></li>
+              <li><a href="/terms" className="hover:text-blue-deep">Terms</a></li>
             </ul>
           </nav>
         </div>
 
-        <div className="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-[13px] text-white/50 md:flex-row md:justify-between">
+        <div className="mt-16 flex flex-col gap-3 border-t border-ink/10 pt-6 text-[13px] text-ink-soft md:flex-row md:justify-between">
           <p>&copy; {year} HealFitMe. All rights reserved.</p>
           <p>HealFitMe is a wellness tool and does not provide medical advice.</p>
         </div>

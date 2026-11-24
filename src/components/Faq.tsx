@@ -3,27 +3,27 @@ import { Reveal } from "./Reveal";
 const FAQS = [
   {
     q: "What is HealFitMe?",
-    a: "An AI-powered recovery app. It looks at your health and activity data, works out where your body is at, and gives you clear daily actions to recover better.",
+    a: "An app that turns your health and activity data into a clearer picture of recovery, then gives you one useful next step each day.",
   },
   {
     q: "Do I need a wearable?",
-    a: "No. You can connect one if you have it, but HealFitMe also works from what you tell us about your training, sleep and how you feel.",
+    a: "No. You can check in with how you feel, or optionally connect your wearable and activity data. Both work.",
   },
   {
     q: "When does it launch?",
-    a: "We are opening early access to the waitlist in stages. Join now and we will email you when your spot is ready.",
+    a: "HealFitMe is in development and coming soon. Join the waitlist and we will email you when early access opens.",
   },
   {
     q: "How much will it cost?",
-    a: "Early access is free. We will share pricing well before anything is charged, and waitlist members will hear first.",
+    a: "We haven't announced pricing yet. Waitlist members will hear first, well before anything is charged.",
   },
   {
     q: "Who are the coaches?",
-    a: "Real coaches lead guided recovery sessions in the app. We will introduce them as we launch.",
+    a: "Guided recovery sessions are led by real coaches. We will introduce them as we get closer to launch.",
   },
   {
     q: "What happens to my data?",
-    a: "Your health data is yours. We only use it to power your recovery plan, and we will explain exactly how in our privacy policy before launch.",
+    a: "Your data is yours. We use it only to power your recovery picture, and we will explain exactly how in our privacy policy before launch.",
   },
   {
     q: "Is HealFitMe medical advice?",
@@ -33,22 +33,24 @@ const FAQS = [
 
 export function Faq() {
   return (
-    <section id="faq" className="bg-white px-6 py-24">
+    <section id="faq" className="bg-white px-6 py-24 md:py-32">
       <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[1fr_1.6fr]">
         <Reveal>
-          <h2 className="display text-[clamp(2rem,4.5vw,3.25rem)]">
-            Questions, <span className="italic">answered</span>
+          <h2 className="display text-[clamp(2.2rem,5vw,3.75rem)]">
+            Questions,
+            <br />
+            <span className="text-blue-deep">answered.</span>
           </h2>
         </Reveal>
         <Reveal delay={100}>
-          <div className="divide-y divide-ink/12 border-y border-ink/12">
+          <div className="divide-y divide-ink/10 border-y border-ink/10">
             {FAQS.map((f) => (
               <details key={f.q} className="group py-5">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-lg font-medium [&::-webkit-details-marker]:hidden">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-lg font-medium tracking-tight [&::-webkit-details-marker]:hidden">
                   {f.q}
                   <span
                     aria-hidden="true"
-                    className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-sand text-xl transition group-open:rotate-45"
+                    className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-sky-2 text-xl text-blue-deep transition duration-300 group-open:rotate-45 group-open:bg-navy group-open:text-white"
                   >
                     +
                   </span>

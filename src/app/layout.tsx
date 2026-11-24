@@ -1,41 +1,35 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Geist } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
   axes: ["opsz"],
-  weight: "variable",
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://healfitme.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "HealFitMe | Recovery, reimagined",
+  title: "HealFitMe | Know what recovery needs today",
   description:
-    "HealFitMe is an AI-powered recovery app. It reads your health and activity data and tells you exactly what to do next to recover better. Join the waitlist.",
+    "HealFitMe turns your health and activity data into a clearer picture of recovery, and one useful next step. Join the waitlist.",
   openGraph: {
-    title: "HealFitMe | Recovery, reimagined",
+    title: "HealFitMe | Know what recovery needs today",
     description:
-      "Know where your body is at, and exactly what to do next. Join the waitlist for early access.",
+      "Your health and activity data, turned into a clearer picture of recovery and one useful next step.",
     type: "website",
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0d2b27",
+  themeColor: "#c3d6f6",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${fraunces.variable} antialiased`}>
+    <html lang="en" className={dmSans.variable}>
       <body className="min-h-screen">{children}</body>
     </html>
   );
