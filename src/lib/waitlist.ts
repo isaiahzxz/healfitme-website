@@ -62,7 +62,9 @@ async function saveToSupabase(
     method: "POST",
     headers: {
       apikey: key,
-      Authorization: `Bearer ${key}`,
+      // Legacy service_role keys are JWTs and go in Authorization too.
+      // New sb_secret_ keys are not JWTs and must only be sent as apikey.
+      ...(key.startsWith("eyJ") ? { Authorization: `Bearer ${key}` } : {}),
       "Content-Type": "application/json",
       Prefer: "return=minimal",
     },
@@ -75,7 +77,10 @@ async function saveToSupabase(
   });
 
   if (res.status === 409) return "duplicate"; // unique(email) violation
-  if (!res.ok) throw new Error(`Supabase insert failed: ${res.status}`);
+  if (!res.ok) {
+    const detail = (await res.text().catch(() => "")).slice(0, 300);
+    throw new Error(`Supabase insert failed: ${res.status} ${detail}`);
+  }
   return "created";
 }
 
