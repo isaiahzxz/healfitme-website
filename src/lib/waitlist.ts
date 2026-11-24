@@ -58,7 +58,7 @@ async function saveToSupabase(
   url: string,
   key: string,
 ): Promise<SaveResult> {
-  const res = await fetch(`${url.replace(/\/$/, "")}/rest/v1/waitlist`, {
+  const res = await fetch(`${new URL(url.trim()).origin}/rest/v1/waitlist`, {
     method: "POST",
     headers: {
       apikey: key,
