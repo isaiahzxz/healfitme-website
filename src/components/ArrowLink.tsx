@@ -13,7 +13,7 @@ export function ArrowLink({
     <Link
       href={href}
       className={`group inline-flex items-center gap-2 text-[15px] font-medium ${
-        tone === "light" ? "text-white" : "text-blue-deep"
+        tone === "light" ? "text-white" : "text-ink"
       }`}
     >
       <span className="underline decoration-current/30 underline-offset-[6px] transition group-hover:decoration-current">

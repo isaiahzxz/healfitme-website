@@ -15,8 +15,7 @@ export function Hero() {
     const onScroll = () => {
       cancelAnimationFrame(raf);
       raf = requestAnimationFrame(() => {
-        const y = Math.min(window.scrollY, 900);
-        el.style.transform = `translate3d(0, ${y * 0.18}px, 0)`;
+        el.style.transform = `translate3d(0, ${Math.min(window.scrollY, 900) * 0.15}px, 0)`;
       });
     };
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -27,7 +26,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="top" className="relative isolate overflow-hidden bg-navy text-white">
+    <section id="top" className="relative isolate flex min-h-[100svh] items-end overflow-hidden bg-black text-white">
       <div ref={photo} className="absolute inset-0 -z-20 will-change-transform">
         <Image
           src="/images/hero.webp"
@@ -35,41 +34,33 @@ export function Hero() {
           fill
           preload
           sizes="100vw"
-          className="hero-image object-cover object-[78%_58%]"
+          className="hero-image object-cover object-[70%_50%]"
         />
       </div>
-      {/* Wash only behind the text, so the photo stays bright on the right */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(15,26,56,0.72)_0%,rgba(15,26,56,0.4)_45%,rgba(15,26,56,0.05)_75%),linear-gradient(180deg,rgba(15,26,56,0.35)_0%,transparent_30%)]"
+        className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(0,0,0,0.25)_0%,rgba(0,0,0,0.18)_40%,rgba(0,0,0,0.6)_100%)]"
       />
 
-      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-navy/35 md:hidden" />
-
-      <div className="mx-auto flex min-h-[760px] max-w-6xl flex-col justify-center px-6 pb-28 pt-40 md:min-h-[860px]">
-        <h1 className="display max-w-2xl text-[clamp(3rem,7.4vw,6rem)]">
-          <span className="line-up inline-block" style={{ animationDelay: "0.15s" }}>
-            Recovery,
-          </span>
-          <br />
-          <span className="line-up inline-block" style={{ animationDelay: "0.3s" }}>
-            reimagined.
-          </span>
+      <div className="mx-auto w-full max-w-[956px] px-6 pb-16 md:pb-20">
+        <h1 className="line-up display text-[clamp(2.6rem,5vw,4rem)]" style={{ animationDelay: "0.15s" }}>
+          Recovery, reimagined
         </h1>
-
         <p
-          className="line-up mt-7 max-w-md text-[clamp(1.05rem,2vw,1.25rem)] text-white/90"
-          style={{ animationDelay: "0.55s" }}
+          className="line-up mt-4 max-w-md text-[clamp(1.05rem,1.6vw,1.25rem)] text-white/90"
+          style={{ animationDelay: "0.3s" }}
         >
-          Know what your body needs today, and the one thing to do next. Coming soon.
+          Know what your body needs today, and the one thing to do next.
         </p>
-
-        <div className="line-up mt-9 w-full max-w-xl" style={{ animationDelay: "0.75s" }}>
+        <div className="line-up mt-8 max-w-[520px]" style={{ animationDelay: "0.45s" }}>
           <WaitlistForm variant="inline" source="hero" />
-          <p className="mt-4 text-[13px] text-white/75">
-            Free to join &middot; Just your email &middot; Only HealFitMe updates
-          </p>
         </div>
+        <p className="line-up mt-6 text-[17px] font-medium" style={{ animationDelay: "0.6s" }}>
+          Free to join. Be first in line.
+        </p>
+        <p className="line-up mt-1 text-[13px] text-white/75" style={{ animationDelay: "0.65s" }}>
+          Just your email. Only HealFitMe updates, and you can leave any time.
+        </p>
       </div>
     </section>
   );

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { ArrowLink } from "@/components/ArrowLink";
-import { FinalCta } from "@/components/FinalCta";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { SessionTabs } from "@/components/coaches/SessionTabs";
@@ -94,7 +93,7 @@ export default function CoachesPage() {
       <section className="sky-gradient relative overflow-clip px-6 py-24 md:py-32">
         <div className="mx-auto max-w-6xl">
           <Reveal className="max-w-2xl">
-            <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-blue-deep">
+            <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-ink-soft">
               Guided sessions
             </p>
             <h2 className="display mt-4 text-[clamp(2.2rem,5.5vw,4.25rem)]">
@@ -115,13 +114,13 @@ export default function CoachesPage() {
       <section className="bg-white px-6 py-24 md:py-32">
         <div className="mx-auto max-w-6xl">
           <Reveal className="max-w-2xl">
-            <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-blue-deep">
+            <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-ink-soft">
               Where coaches fit
             </p>
             <h2 className="display mt-4 text-[clamp(2.2rem,5vw,4rem)]">
               The app sets the plan.
               <br />
-              <span className="text-blue-deep">Coaches guide you.</span>
+              <span className="text-ink-soft">Coaches guide you.</span>
             </h2>
           </Reveal>
 
@@ -136,7 +135,7 @@ export default function CoachesPage() {
                   <span className="absolute left-0 top-0 grid h-10 w-10 place-items-center rounded-full bg-navy text-[14px] font-medium text-white">
                     {i + 1}
                   </span>
-                  <p className="text-[12px] font-medium uppercase tracking-[0.16em] text-blue-deep">
+                  <p className="text-[12px] font-medium uppercase tracking-[0.16em] text-ink-soft">
                     {d.when}
                   </p>
                   <h3 className="mt-2 text-[22px] font-medium leading-tight tracking-[-0.02em]">
@@ -210,7 +209,7 @@ export default function CoachesPage() {
       <section className="bg-mist px-6 py-24 md:py-32">
         <div className="mx-auto max-w-6xl">
           <Reveal className="max-w-2xl">
-            <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-blue-deep">
+            <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-ink-soft">
               Meet the coaches
             </p>
             <h2 className="display mt-4 text-[clamp(2.2rem,5vw,4rem)]">
@@ -263,7 +262,6 @@ export default function CoachesPage() {
         </div>
       </section>
 
-      <FinalCta />
     </main>
   );
 }
