@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import { Phone } from "./Phone";
 import { WaitlistForm } from "./WaitlistForm";
 
 export function Hero() {
@@ -36,62 +35,40 @@ export function Hero() {
           fill
           preload
           sizes="100vw"
-          className="hero-image object-cover object-[72%_58%]"
+          className="hero-image object-cover object-[78%_58%]"
         />
       </div>
-      {/* Navy wash keeps the white headline legible over the bright sky */}
+      {/* Wash only behind the text, so the photo stays bright on the right */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(15,26,56,0.62)_0%,rgba(15,26,56,0.34)_48%,rgba(15,26,56,0.7)_100%)]"
+        className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(15,26,56,0.72)_0%,rgba(15,26,56,0.4)_45%,rgba(15,26,56,0.05)_75%),linear-gradient(180deg,rgba(15,26,56,0.35)_0%,transparent_30%)]"
       />
 
-      <div className="mx-auto flex max-w-6xl flex-col items-center px-6 pt-36 text-center md:pt-44">
-        <p
-          className="line-up text-[11px] font-medium uppercase tracking-[0.16em] text-white/80 sm:text-[12px] sm:tracking-[0.2em]"
-          style={{ animationDelay: "0.1s" }}
-        >
-          Recovery, made personal &middot; Coming soon
-        </p>
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-navy/35 md:hidden" />
 
-        <h1 className="display mt-6 max-w-4xl text-[clamp(3rem,7.6vw,5.75rem)]">
-          <span className="line-up inline-block" style={{ animationDelay: "0.2s" }}>
-            Know what
+      <div className="mx-auto flex min-h-[760px] max-w-6xl flex-col justify-center px-6 pb-28 pt-40 md:min-h-[860px]">
+        <h1 className="display max-w-2xl text-[clamp(3rem,7.4vw,6rem)]">
+          <span className="line-up inline-block" style={{ animationDelay: "0.15s" }}>
+            Recovery,
           </span>
           <br />
-          <span className="line-up inline-block" style={{ animationDelay: "0.35s" }}>
-            recovery needs
-          </span>
-          <br />
-          <span className="line-up inline-block text-sky" style={{ animationDelay: "0.5s" }}>
-            today.
+          <span className="line-up inline-block" style={{ animationDelay: "0.3s" }}>
+            reimagined.
           </span>
         </h1>
 
         <p
-          className="line-up mt-7 max-w-xl text-[clamp(1rem,2vw,1.2rem)] text-white/85"
-          style={{ animationDelay: "0.7s" }}
+          className="line-up mt-7 max-w-md text-[clamp(1.05rem,2vw,1.25rem)] text-white/90"
+          style={{ animationDelay: "0.55s" }}
         >
-          Your health and activity data, turned into a clearer picture of
-          recovery, and one useful next step.
+          Know what your body needs today, and the one thing to do next. Coming soon.
         </p>
 
-        <div
-          className="line-up mt-9 flex w-full flex-col items-center"
-          style={{ animationDelay: "0.85s" }}
-        >
+        <div className="line-up mt-9 w-full max-w-xl" style={{ animationDelay: "0.75s" }}>
           <WaitlistForm variant="inline" source="hero" />
-          <p className="mt-4 text-[13px] text-white/70">
-            Just your email. Only HealFitMe updates.
+          <p className="mt-4 text-[13px] text-white/75">
+            Free to join &middot; Just your email &middot; Only HealFitMe updates
           </p>
-        </div>
-
-        {/* Only the top of the phone peeks above the fold, like future.co */}
-        <div className="mt-14 h-[300px] w-full max-w-[290px] overflow-hidden sm:h-[340px]">
-          <div className="phone-enter">
-            <div className="float-y">
-              <Phone preload />
-            </div>
-          </div>
         </div>
       </div>
     </section>
