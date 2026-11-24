@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
+import { ArrowLink } from "./ArrowLink";
 import { Reveal } from "./Reveal";
 
 /* ---------- Count-up number that eases between scores ---------- */
@@ -209,12 +210,14 @@ function Card({
   children,
   delay,
   id,
+  link,
 }: {
   title: string;
   body: string;
   children: ReactNode;
   delay: number;
   id?: string;
+  link?: { href: string; label: string };
 }) {
   return (
     <Reveal delay={delay}>
@@ -227,6 +230,11 @@ function Card({
             {title}
           </h3>
           <p className="mt-3 max-w-md text-[16px] text-ink-soft">{body}</p>
+          {link && (
+            <div className="mt-4">
+              <ArrowLink href={link.href}>{link.label}</ArrowLink>
+            </div>
+          )}
         </div>
         <div className="mt-8 flex flex-1 items-end justify-center px-6 md:px-10">
           {children}
@@ -271,6 +279,7 @@ export function Features() {
         <div className="mx-auto -mt-28 grid max-w-6xl gap-5 md:grid-cols-2">
           <Card
             delay={0}
+            link={{ href: "/product", label: "Look inside the app" }}
             title="A clearer picture. A kinder pace."
             body="Some days call for more. Others call for a little less. HealFitMe makes sense of your health and activity data without getting lost in the numbers."
           >
@@ -291,8 +300,8 @@ export function Features() {
             <CheckIn />
           </Card>
           <Card
-            id="coaches"
             delay={100}
+            link={{ href: "/coaches", label: "Meet the coaches" }}
             title="Real guidance. A human touch."
             body="You won't have to figure it all out alone. Guided recovery sessions from real coaches help you make space for your body."
           >

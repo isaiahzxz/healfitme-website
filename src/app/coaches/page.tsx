@@ -1,0 +1,267 @@
+import type { Metadata } from "next";
+import { ArrowLink } from "@/components/ArrowLink";
+import { FinalCta } from "@/components/FinalCta";
+import { PageHero } from "@/components/PageHero";
+import { Reveal } from "@/components/Reveal";
+import { SessionTabs } from "@/components/coaches/SessionTabs";
+import { FAQS } from "@/lib/faq";
+
+export const metadata: Metadata = {
+  title: "Coaches | HealFitMe",
+  description:
+    "Guided recovery sessions from real coaches. Short, achievable and matched to how your body is today. Join the HealFitMe waitlist.",
+};
+
+const DAY = [
+  {
+    when: "Morning",
+    title: "You check in",
+    body: "Five quick questions about how you feel set the tone for the day.",
+  },
+  {
+    when: "Right after",
+    title: "You see your score and mission",
+    body: "Rest, Watch or Good, plus one useful thing to do, with the reason it was chosen.",
+  },
+  {
+    when: "When it fits",
+    title: "A coach guides you through it",
+    body: "A short session, talked through start to finish, so you are never guessing.",
+  },
+  {
+    when: "Tomorrow",
+    title: "You check in again",
+    body: "Your next check-in tells HealFitMe how today went, and the cycle continues.",
+  },
+];
+
+const IS = [
+  "Real people leading short, guided recovery sessions",
+  "Matched to how your body is today",
+  "Calm, clear and easy to follow",
+  "Built to fit into a real day",
+];
+
+const ISNT = [
+  "Medical advice, diagnosis or treatment",
+  "A replacement for your doctor or physical therapist",
+  "A hard sell or a long program to commit to",
+  "A reason to push through pain",
+];
+
+export default function CoachesPage() {
+  const coachFaqs = FAQS.filter((f) => f.category === "coaches");
+
+  return (
+    <main>
+      <PageHero
+        eyebrow="Coaches"
+        title={
+          <>
+            Real guidance.
+            <br />
+            <span className="text-sky">A human touch.</span>
+          </>
+        }
+        body="You won't have to figure it all out alone. The app reads the data. Coaches turn it into something you can feel: short guided sessions that make space for your body."
+      >
+        <div className="phone-enter mx-auto w-full max-w-sm" style={{ ["--tilt" as string]: "-2deg" }}>
+          <div className="float-y rounded-[36px] bg-white/10 p-4 ring-1 ring-white/20 backdrop-blur-xl">
+            <div className="relative grid aspect-square place-items-center overflow-hidden rounded-[28px] bg-[linear-gradient(145deg,#3f6bd0_0%,#6f9ae6_55%,#c3d6f6_100%)]">
+              <span aria-hidden="true" className="breathe absolute h-64 w-64 rounded-full bg-white/30" />
+              <span
+                aria-hidden="true"
+                className="breathe absolute h-44 w-44 rounded-full bg-white/45"
+                style={{ animationDelay: "0.25s" }}
+              />
+              <span className="relative grid h-16 w-16 place-items-center rounded-full bg-white text-navy shadow-xl">
+                <svg width="20" height="20" viewBox="0 0 22 22" fill="currentColor" aria-hidden="true">
+                  <path d="M6 3.5v15l13-7.5z" />
+                </svg>
+              </span>
+              <span className="absolute bottom-4 left-4 rounded-full bg-white/90 px-3 py-1 text-[12px] font-medium text-ink">
+                12 min
+              </span>
+            </div>
+            <div className="px-3 pb-2 pt-4">
+              <p className="text-[18px] font-medium tracking-tight">A 12-minute guided reset</p>
+              <p className="text-[14px] text-white/65">Led by a real coach. Example session.</p>
+            </div>
+          </div>
+        </div>
+      </PageHero>
+
+      {/* Sessions */}
+      <section className="sky-gradient relative overflow-clip px-6 py-24 md:py-32">
+        <div className="mx-auto max-w-6xl">
+          <Reveal className="max-w-2xl">
+            <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-blue-deep">
+              Guided sessions
+            </p>
+            <h2 className="display mt-4 text-[clamp(2.2rem,5.5vw,4.25rem)]">
+              Short enough for a real day.
+            </h2>
+            <p className="mt-5 text-lg text-ink-soft">
+              A gentle mobility session. A moment to breathe. Pick a type and tap play
+              for a taste of how sessions will feel.
+            </p>
+          </Reveal>
+          <Reveal delay={100} className="mt-12">
+            <SessionTabs />
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Day flow */}
+      <section className="bg-white px-6 py-24 md:py-32">
+        <div className="mx-auto max-w-6xl">
+          <Reveal className="max-w-2xl">
+            <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-blue-deep">
+              Where coaches fit
+            </p>
+            <h2 className="display mt-4 text-[clamp(2.2rem,5vw,4rem)]">
+              The app sets the plan.
+              <br />
+              <span className="text-blue-deep">Coaches guide you.</span>
+            </h2>
+          </Reveal>
+
+          <ol className="relative mt-16 grid gap-10 md:grid-cols-4 md:gap-6">
+            <span
+              aria-hidden="true"
+              className="absolute left-[19px] top-2 hidden h-[calc(100%-16px)] w-px bg-ink/10 max-md:block md:left-0 md:top-[19px] md:h-px md:w-full"
+            />
+            {DAY.map((d, i) => (
+              <li key={d.title} className="relative pl-14 md:pl-0 md:pt-14">
+                <Reveal delay={i * 110}>
+                  <span className="absolute left-0 top-0 grid h-10 w-10 place-items-center rounded-full bg-navy text-[14px] font-medium text-white">
+                    {i + 1}
+                  </span>
+                  <p className="text-[12px] font-medium uppercase tracking-[0.16em] text-blue-deep">
+                    {d.when}
+                  </p>
+                  <h3 className="mt-2 text-[22px] font-medium leading-tight tracking-[-0.02em]">
+                    {d.title}
+                  </h3>
+                  <p className="mt-2 text-ink-soft">{d.body}</p>
+                </Reveal>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* Is / isn't */}
+      <section className="relative isolate overflow-hidden bg-navy px-6 py-24 text-white md:py-32">
+        <div
+          aria-hidden="true"
+          className="drift absolute -right-32 top-0 -z-10 h-[460px] w-[620px] rounded-full bg-blue/25 blur-[120px]"
+        />
+        <div className="mx-auto max-w-6xl">
+          <Reveal className="max-w-2xl">
+            <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-sky/80">
+              Straight answers
+            </p>
+            <h2 className="display mt-4 text-[clamp(2.2rem,5vw,4rem)]">
+              What a coach is,
+              <br />
+              <span className="text-sky">and isn&apos;t.</span>
+            </h2>
+          </Reveal>
+          <div className="mt-14 grid gap-5 md:grid-cols-2">
+            <Reveal>
+              <div className="h-full rounded-[32px] bg-white/10 p-8 ring-1 ring-white/15 backdrop-blur md:p-10">
+                <p className="text-[13px] font-medium uppercase tracking-[0.16em] text-sky">
+                  A coach is
+                </p>
+                <ul className="mt-5 space-y-4 text-[17px]">
+                  {IS.map((t) => (
+                    <li key={t} className="flex gap-3">
+                      <svg className="mt-1 shrink-0 text-sky" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <path d="M3.5 9.5l3.5 3.5 7.5-8" />
+                      </svg>
+                      {t}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+            <Reveal delay={100}>
+              <div className="h-full rounded-[32px] bg-white/5 p-8 ring-1 ring-white/10 md:p-10">
+                <p className="text-[13px] font-medium uppercase tracking-[0.16em] text-white/60">
+                  A coach isn&apos;t
+                </p>
+                <ul className="mt-5 space-y-4 text-[17px] text-white/80">
+                  {ISNT.map((t) => (
+                    <li key={t} className="flex gap-3">
+                      <svg className="mt-1 shrink-0 text-white/50" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+                        <path d="M4.5 4.5l9 9M13.5 4.5l-9 9" />
+                      </svg>
+                      {t}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Coach placeholders */}
+      <section className="bg-mist px-6 py-24 md:py-32">
+        <div className="mx-auto max-w-6xl">
+          <Reveal className="max-w-2xl">
+            <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-blue-deep">
+              Meet the coaches
+            </p>
+            <h2 className="display mt-4 text-[clamp(2.2rem,5vw,4rem)]">
+              Introductions are coming.
+            </h2>
+            <p className="mt-5 text-lg text-ink-soft">
+              We are still building the team. Waitlist members will meet the coaches
+              first, before anyone else.
+            </p>
+          </Reveal>
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            {["Coach one", "Coach two", "Coach three"].map((n, i) => (
+              <Reveal key={n} delay={i * 100}>
+                <div className="rounded-[32px] bg-white p-6 ring-1 ring-ink/5">
+                  <div
+                    aria-hidden="true"
+                    className="shimmer aspect-[4/3] rounded-3xl bg-[linear-gradient(110deg,#dce7fb_30%,#f5f8fe_50%,#dce7fb_70%)]"
+                  />
+                  <p className="mt-5 text-[20px] font-medium tracking-tight">{n}</p>
+                  <p className="text-ink-soft">To be announced</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Coach FAQs */}
+      <section className="bg-white px-6 py-24 md:py-28">
+        <div className="mx-auto max-w-6xl">
+          <Reveal className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
+            <h2 className="display text-[clamp(2rem,4.4vw,3.25rem)]">
+              Questions about coaches
+            </h2>
+            <ArrowLink href="/faq">See every question</ArrowLink>
+          </Reveal>
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            {coachFaqs.map((f, i) => (
+              <Reveal key={f.id} delay={i * 80}>
+                <div className="h-full rounded-[28px] bg-mist p-7 ring-1 ring-ink/5">
+                  <h3 className="text-[19px] font-medium tracking-tight">{f.q}</h3>
+                  <p className="mt-2 text-ink-soft">{f.a}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <FinalCta />
+    </main>
+  );
+}

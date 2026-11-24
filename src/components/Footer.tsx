@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Logo } from "./Logo";
 
 async function currentYear() {
@@ -27,9 +28,9 @@ export async function Footer() {
           <nav aria-label="Product">
             <p className="text-[12px] uppercase tracking-[0.16em] text-ink-soft">Product</p>
             <ul className="mt-4 space-y-3 text-[15px]">
-              <li><a href="#story" className="hover:text-blue-deep">The app</a></li>
-              <li><a href="#coaches" className="hover:text-blue-deep">Coaches</a></li>
-              <li><a href="#faq" className="hover:text-blue-deep">FAQ</a></li>
+              <li><Link href="/product" className="hover:text-blue-deep">The app</Link></li>
+              <li><Link href="/coaches" className="hover:text-blue-deep">Coaches</Link></li>
+              <li><Link href="/faq" className="hover:text-blue-deep">FAQ</Link></li>
               <li><a href="#waitlist" className="hover:text-blue-deep">Waitlist</a></li>
             </ul>
           </nav>
@@ -37,8 +38,8 @@ export async function Footer() {
           <nav aria-label="Legal">
             <p className="text-[12px] uppercase tracking-[0.16em] text-ink-soft">Company</p>
             <ul className="mt-4 space-y-3 text-[15px]">
-              <li><a href="/privacy" className="hover:text-blue-deep">Privacy</a></li>
-              <li><a href="/terms" className="hover:text-blue-deep">Terms</a></li>
+              <li><Link href="/privacy" className="hover:text-blue-deep">Privacy</Link></li>
+              <li><Link href="/terms" className="hover:text-blue-deep">Terms</Link></li>
             </ul>
           </nav>
         </div>

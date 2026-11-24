@@ -5,7 +5,7 @@ export const metadata: Metadata = { title: "Privacy | HealFitMe" };
 
 export default function Privacy() {
   return (
-    <main className="mx-auto max-w-2xl px-6 py-24">
+    <main className="mx-auto max-w-2xl px-6 pb-24 pt-44">
       <Link href="/" className="text-sm text-ink-soft hover:text-ink">
         &larr; Back to HealFitMe
       </Link>

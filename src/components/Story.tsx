@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { ArrowLink } from "./ArrowLink";
 import { Phone } from "./Phone";
 
 // Spotlight regions on the real app screen, as fractions of the screen.
@@ -60,6 +61,9 @@ export function Story() {
             <br />
             in one glance.
           </h2>
+          <div className="mt-6">
+            <ArrowLink href="/product">Look inside the app</ArrowLink>
+          </div>
         </div>
 
         <div className="mt-14 grid items-start gap-10 md:mt-20 md:grid-cols-2 md:gap-20">
