@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { ArrowLink } from "@/components/ArrowLink";
+import { FinalCta } from "@/components/FinalCta";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { SessionTabs } from "@/components/coaches/SessionTabs";
@@ -262,6 +263,7 @@ export default function CoachesPage() {
         </div>
       </section>
 
+      <FinalCta />
     </main>
   );
 }

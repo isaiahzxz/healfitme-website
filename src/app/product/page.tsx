@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ArrowLink } from "@/components/ArrowLink";
+import { FinalCta } from "@/components/FinalCta";
 import { PageHero } from "@/components/PageHero";
 import { Phone } from "@/components/Phone";
 import { CheckInDemo } from "@/components/product/CheckInDemo";
@@ -193,7 +194,7 @@ export default function ProductPage() {
           <div className="mt-14 grid items-stretch gap-5 md:grid-cols-[1fr_auto_1fr]">
             <Reveal>
               <div className="h-full rounded-[32px] bg-mist p-8 ring-1 ring-ink/5 md:p-10">
-                <p className="text-[12px] font-medium uppercase tracking-[0.18em] text-blue-deep">
+                <p className="text-[12px] font-medium uppercase tracking-[0.18em] text-ink-soft">
                   Path one
                 </p>
                 <h3 className="mt-3 text-[28px] font-medium leading-tight tracking-[-0.025em]">
@@ -214,7 +215,7 @@ export default function ProductPage() {
 
             <Reveal delay={100}>
               <div className="h-full rounded-[32px] bg-mist p-8 ring-1 ring-ink/5 md:p-10">
-                <p className="text-[12px] font-medium uppercase tracking-[0.18em] text-blue-deep">
+                <p className="text-[12px] font-medium uppercase tracking-[0.18em] text-ink-soft">
                   Path two, optional
                 </p>
                 <h3 className="mt-3 text-[28px] font-medium leading-tight tracking-[-0.025em]">
@@ -250,6 +251,7 @@ export default function ProductPage() {
         </Reveal>
       </section>
 
+      <FinalCta />
     </main>
   );
 }

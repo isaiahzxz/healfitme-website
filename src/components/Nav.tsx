@@ -25,49 +25,60 @@ export function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const dark = !solid && !open;
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       <a
         href="#waitlist"
-        className="block bg-[linear-gradient(90deg,#f6f1ea,#e7ebf8)] px-4 py-2 text-center text-[13px] text-ink"
+        className="block bg-navy px-4 py-2 text-center text-[13px] text-white"
       >
-        <span className="opacity-70">Coming soon.</span>{" "}
-        <span className="underline underline-offset-4">Join the waitlist for early access</span>
+        <span className="opacity-80">Coming soon.</span>{" "}
+        <span className="font-medium underline underline-offset-4">
+          Join the waitlist for early access
+        </span>
       </a>
 
       <nav
         aria-label="Main"
-        className={`flex items-center justify-between px-5 md:grid md:grid-cols-[1fr_auto_1fr] py-3 transition-colors duration-500 md:px-10 ${
-          solid ? "bg-white text-ink" : "text-white"
+        className={`mx-auto mt-3 flex w-[calc(100%-24px)] max-w-6xl items-center justify-between rounded-full px-5 py-2.5 transition-all duration-500 ${
+          solid
+            ? "bg-white/85 text-ink shadow-[0_10px_40px_-15px_rgba(15,26,56,0.35)] backdrop-blur-xl"
+            : "text-white"
         }`}
       >
-        <div className="hidden md:block" />
-        <Link href="/" aria-label="HealFitMe home" className="justify-self-start md:justify-self-center">
-          <Logo light={dark} />
+        <Link href="/" aria-label="HealFitMe home">
+          <Logo light={!solid} />
         </Link>
 
-        <div className="flex items-center justify-self-end gap-1 md:gap-8">
-          <ul className="hidden items-center gap-8 text-[16px] md:flex">
-            {LINKS.map((l) => {
-              const active = pathname === l.href;
-              return (
-                <li key={l.href}>
-                  <Link
-                    href={l.href}
-                    aria-current={active ? "page" : undefined}
-                    className={`transition hover:opacity-100 ${active ? "opacity-100" : "opacity-75"}`}
-                  >
-                    {l.label}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+        <ul className="hidden items-center gap-9 text-[14px] md:flex">
+          {LINKS.map((l) => {
+            const active = pathname === l.href;
+            return (
+              <li key={l.href}>
+                <Link
+                  href={l.href}
+                  aria-current={active ? "page" : undefined}
+                  className={`relative py-1 transition hover:opacity-100 ${
+                    active ? "opacity-100" : "opacity-80"
+                  }`}
+                >
+                  {l.label}
+                  <span
+                    aria-hidden="true"
+                    className={`absolute inset-x-0 -bottom-0.5 h-px origin-left bg-current transition-transform duration-500 ${
+                      active ? "scale-x-100" : "scale-x-0"
+                    }`}
+                  />
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+
+        <div className="flex items-center gap-1">
           <a
             href="#waitlist"
-            className={`whitespace-nowrap rounded-[14px] px-5 py-3 text-[15px] transition ${
-              solid ? "bg-navy text-white hover:bg-navy-2" : "bg-white/95 text-ink hover:bg-white"
+            className={`whitespace-nowrap rounded-full px-5 py-2.5 text-[14px] font-medium transition ${
+              solid ? "bg-navy text-white hover:bg-navy-2" : "bg-white text-ink hover:bg-sky-2"
             }`}
           >
             <span className="sm:hidden">Join</span>
@@ -80,7 +91,7 @@ export function Nav() {
             aria-expanded={open}
             onClick={() => setOpenAt(open ? null : pathname)}
           >
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
               {open ? <path d="M4 4l12 12M16 4L4 16" /> : <path d="M3 6h14M3 14h14" />}
             </svg>
           </button>
@@ -88,9 +99,13 @@ export function Nav() {
       </nav>
 
       {open && (
-        <div className="unlock-pop mx-3 mt-1 rounded-[20px] bg-white p-3 text-ink shadow-xl md:hidden">
+        <div className="unlock-pop mx-3 mt-2 rounded-3xl bg-white p-3 text-ink shadow-xl md:hidden">
           {LINKS.map((l) => (
-            <Link key={l.href} href={l.href} className="block rounded-xl px-4 py-3 text-[17px] hover:bg-mist">
+            <Link
+              key={l.href}
+              href={l.href}
+              className="block rounded-2xl px-4 py-3 text-[16px] hover:bg-mist"
+            >
               {l.label}
             </Link>
           ))}

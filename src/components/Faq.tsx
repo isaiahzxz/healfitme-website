@@ -25,7 +25,7 @@ export function Faq() {
           <div className="divide-y divide-ink/10 border-y border-ink/10">
             {items.map((f) => (
               <details key={f.id} className="group py-5">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-lg tracking-tight [&::-webkit-details-marker]:hidden">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-lg font-medium tracking-tight [&::-webkit-details-marker]:hidden">
                   {f.q}
                   <span
                     aria-hidden="true"
