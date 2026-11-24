@@ -23,7 +23,6 @@ export async function Footer() {
             >
               Join the waitlist
             </a>
-            <p className="mt-5 text-[13px] text-ink-soft">Coming soon to iPhone and Android.</p>
           </div>
 
           <nav aria-label="Product">

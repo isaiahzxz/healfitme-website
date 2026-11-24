@@ -87,7 +87,7 @@ export function WaitlistForm({
   );
   const error =
     state.kind === "error" ? (
-      <p role="alert" className="mt-3 text-center text-[14px] font-medium text-[#ffb4ab]">
+      <p role="alert" className="mt-3 text-center text-[14px] font-medium text-[#b3261e]">
         {state.message}
       </p>
     ) : null;
