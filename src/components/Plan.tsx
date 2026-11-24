@@ -12,16 +12,16 @@ const ITEMS = [
 
 export function Plan() {
   return (
-    <section id="plan" className="bg-white p-3 md:p-4">
+    <section id="plan" className="bg-white px-3 pb-3 md:px-4 md:pb-4">
       <div className="relative isolate overflow-hidden rounded-[28px] text-white">
         <Image
-          src="/images/hero.webp"
+          src="/images/massage.webp"
           alt=""
           fill
           sizes="100vw"
-          className="-z-20 object-cover object-[85%_50%] grayscale"
+          className="-z-20 object-cover object-[50%_35%]"
         />
-        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,0,0,0.7)_0%,rgba(0,0,0,0.35)_60%,rgba(0,0,0,0.15)_100%)]" />
+        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(15,26,56,0.85)_0%,rgba(15,26,56,0.55)_60%,rgba(15,26,56,0.35)_100%)]" />
 
         <div className="mx-auto max-w-[1100px] px-6 py-16 md:px-10 md:py-24">
           <Reveal className="max-w-xl">

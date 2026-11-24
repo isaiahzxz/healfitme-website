@@ -51,7 +51,7 @@ export default function ProductPage() {
       <section className="sky-gradient relative overflow-clip px-6 py-24 md:py-32">
         <div className="mx-auto max-w-6xl">
           <Reveal className="max-w-2xl">
-            <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-ink-soft">
+            <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-blue-deep">
               The home screen
             </p>
             <h2 className="display mt-4 text-[clamp(2.2rem,5.5vw,4.25rem)]">
@@ -71,13 +71,13 @@ export default function ProductPage() {
       <section className="bg-white px-6 py-24 md:py-32">
         <div className="mx-auto max-w-6xl">
           <Reveal className="mx-auto max-w-3xl text-center">
-            <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-ink-soft">
+            <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-blue-deep">
               The recovery score
             </p>
             <h2 className="display mt-4 text-[clamp(2.2rem,5.5vw,4.25rem)]">
               Some days call for more.
               <br />
-              <span className="text-ink-soft">Others, a little less.</span>
+              <span className="text-blue-deep">Others, a little less.</span>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg text-ink-soft">
               One number, one word. Rest, Watch or Good tells you how today looks
@@ -127,13 +127,13 @@ export default function ProductPage() {
             <MissionDemo />
           </Reveal>
           <Reveal delay={100} className="order-1 md:order-2">
-            <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-ink-soft">
+            <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-blue-deep">
               Today&apos;s mission
             </p>
             <h2 className="display mt-4 text-[clamp(2.2rem,5vw,4rem)]">
               One thing.
               <br />
-              <span className="text-ink-soft">Not twenty.</span>
+              <span className="text-blue-deep">Not twenty.</span>
             </h2>
             <p className="mt-6 max-w-md text-lg text-ink-soft">
               Your personalized daily mission turns recovery insight into one
@@ -151,7 +151,7 @@ export default function ProductPage() {
       <section className="sky-gradient px-6 py-24 md:py-32">
         <div className="mx-auto max-w-6xl">
           <Reveal className="max-w-2xl">
-            <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-ink-soft">
+            <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-blue-deep">
               Everything in the app
             </p>
             <h2 className="display mt-4 text-[clamp(2.2rem,5vw,4rem)]">
@@ -166,7 +166,7 @@ export default function ProductPage() {
             {APP_FEATURES.map((f, i) => (
               <Reveal key={f.tag} delay={(i % 3) * 80}>
                 <div className="h-full rounded-[28px] bg-white/80 p-7 ring-1 ring-ink/5 backdrop-blur transition hover:-translate-y-1 hover:bg-white">
-                  <p className="text-[12px] font-medium uppercase tracking-[0.18em] text-ink-soft">{f.tag}</p>
+                  <p className="text-[12px] font-medium uppercase tracking-[0.18em] text-blue-deep">{f.tag}</p>
                   <h3 className="mt-3 text-[22px] font-medium leading-tight tracking-[-0.02em]">{f.title}</h3>
                   <p className="mt-2 text-[15px] text-ink-soft">{f.body}</p>
                 </div>
@@ -180,20 +180,20 @@ export default function ProductPage() {
       <section className="bg-white px-6 py-24 md:py-32">
         <div className="mx-auto max-w-6xl">
           <Reveal className="max-w-2xl">
-            <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-ink-soft">
+            <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-blue-deep">
               Your data, your choice
             </p>
             <h2 className="display mt-4 text-[clamp(2.2rem,5vw,4rem)]">
               Bring your wearable.
               <br />
-              <span className="text-ink-soft">Or don&apos;t.</span>
+              <span className="text-blue-deep">Or don&apos;t.</span>
             </h2>
           </Reveal>
 
           <div className="mt-14 grid items-stretch gap-5 md:grid-cols-[1fr_auto_1fr]">
             <Reveal>
               <div className="h-full rounded-[32px] bg-mist p-8 ring-1 ring-ink/5 md:p-10">
-                <p className="text-[12px] font-medium uppercase tracking-[0.18em] text-ink-soft">
+                <p className="text-[12px] font-medium uppercase tracking-[0.18em] text-blue-deep">
                   Path one
                 </p>
                 <h3 className="mt-3 text-[28px] font-medium leading-tight tracking-[-0.025em]">
@@ -214,7 +214,7 @@ export default function ProductPage() {
 
             <Reveal delay={100}>
               <div className="h-full rounded-[32px] bg-mist p-8 ring-1 ring-ink/5 md:p-10">
-                <p className="text-[12px] font-medium uppercase tracking-[0.18em] text-ink-soft">
+                <p className="text-[12px] font-medium uppercase tracking-[0.18em] text-blue-deep">
                   Path two, optional
                 </p>
                 <h3 className="mt-3 text-[28px] font-medium leading-tight tracking-[-0.025em]">

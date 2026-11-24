@@ -12,9 +12,9 @@ async function currentYear() {
 export async function Footer() {
   const year = await currentYear();
   return (
-    <footer id="waitlist" className="relative isolate overflow-hidden bg-black text-white">
-      <Image src="/images/reset.webp" alt="" fill sizes="100vw" className="-z-20 object-cover grayscale" />
-      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(0,0,0,0.35)_0%,rgba(0,0,0,0.55)_55%,rgba(0,0,0,0.85)_100%)]" />
+    <footer id="waitlist" className="relative isolate overflow-hidden bg-navy text-white">
+      <Image src="/images/reset.webp" alt="" fill sizes="100vw" className="-z-20 object-cover" />
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(15,26,56,0.55)_0%,rgba(15,26,56,0.7)_55%,rgba(15,26,56,0.92)_100%)]" />
 
       <div className="mx-auto flex min-h-[900px] max-w-[1200px] flex-col justify-end px-6 pb-8 pt-40">
         <Reveal>

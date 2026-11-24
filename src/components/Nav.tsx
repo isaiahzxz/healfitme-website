@@ -67,7 +67,7 @@ export function Nav() {
           <a
             href="#waitlist"
             className={`whitespace-nowrap rounded-[14px] px-5 py-3 text-[15px] transition ${
-              solid ? "bg-black text-white hover:bg-navy-2" : "bg-white/95 text-ink hover:bg-white"
+              solid ? "bg-navy text-white hover:bg-navy-2" : "bg-white/95 text-ink hover:bg-white"
             }`}
           >
             <span className="sm:hidden">Join</span>
