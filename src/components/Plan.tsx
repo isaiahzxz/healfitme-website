@@ -32,11 +32,11 @@ export function Plan() {
   return (
     <section id="plan" className="relative isolate overflow-hidden text-white">
       <Image
-        src="/images/hero.webp"
+        src="/images/plan.webp"
         alt=""
         fill
         sizes="100vw"
-        className="-z-20 scale-[1.25] object-cover object-[88%_55%]"
+        className="-z-20 object-cover object-[70%_60%]"
       />
       <div
         aria-hidden="true"
