@@ -8,7 +8,7 @@ import { FAQS } from "@/lib/faq";
 export const metadata: Metadata = {
   title: "FAQ | HealFitMe",
   description:
-    "Answers about HealFitMe: how the recovery score works, whether you need a wearable, what coaches do, your data, launch and pricing.",
+    "Answers about HealFitMe: how the recovery score works, whether you need a wearable, what the sessions are, your data, early testing and pricing.",
 };
 
 export default function FaqPage() {
@@ -53,7 +53,7 @@ export default function FaqPage() {
           <p className="display text-[clamp(1.75rem,3.6vw,2.5rem)]">Want to see it for yourself?</p>
           <div className="flex flex-wrap gap-x-8 gap-y-3">
             <ArrowLink href="/product">Look inside the app</ArrowLink>
-            <ArrowLink href="/coaches">Meet the coaches</ArrowLink>
+            <ArrowLink href="/coaches">See the guided sessions</ArrowLink>
           </div>
         </Reveal>
       </section>

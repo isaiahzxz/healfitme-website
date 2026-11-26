@@ -7,7 +7,7 @@ import { Logo } from "./Logo";
 
 const LINKS = [
   { href: "/product", label: "The app" },
-  { href: "/coaches", label: "Coaches" },
+  { href: "/coaches", label: "Sessions" },
   { href: "/faq", label: "FAQ" },
 ];
 
@@ -32,8 +32,8 @@ export function Nav() {
         href="#waitlist"
         className="block bg-[linear-gradient(90deg,#f6f1ea,#e7ebf8)] px-4 py-2 text-center text-[13px] text-ink"
       >
-        <span className="opacity-70">Coming soon.</span>{" "}
-        <span className="underline underline-offset-4">Join the waitlist for early access</span>
+        <span className="opacity-70">Coming soon to iOS.</span>{" "}
+        <span className="underline underline-offset-4">Join early testing</span>
       </a>
 
       <nav
@@ -71,7 +71,7 @@ export function Nav() {
             }`}
           >
             <span className="sm:hidden">Join</span>
-            <span className="hidden sm:inline">Join the waitlist</span>
+            <span className="hidden sm:inline">Join early testing</span>
           </a>
           <button
             type="button"

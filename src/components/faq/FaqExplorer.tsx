@@ -75,7 +75,7 @@ export function FaqExplorer() {
         <div className="unlock-pop mt-4 rounded-[28px] bg-mist p-8 text-center">
           <p className="text-xl font-medium tracking-tight">Nothing matches that yet</p>
           <p className="mt-2 text-ink-soft">
-            Try a different word, or join the waitlist and we&apos;ll keep you posted.
+            Try a different word, or sign up for early testing and we&apos;ll keep you posted.
           </p>
         </div>
       ) : (

@@ -18,12 +18,12 @@ export async function Footer() {
 
       <div className="mx-auto flex min-h-[900px] max-w-[1200px] flex-col justify-end px-6 pb-8 pt-40">
         <Reveal>
-          <h2 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.95]">Join the waitlist</h2>
-          <p className="mt-5 max-w-md text-[18px] text-white/85">
-            We will email you when early access opens.
+          <h2 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.95]">Join early testing</h2>
+          <p className="mt-5 max-w-lg text-[18px] text-white/85">
+            Sign up and we will email you when early testing opens on iPhone.
           </p>
           <div className="mt-8 max-w-xl">
-            <WaitlistForm variant="full" source="footer" />
+            <WaitlistForm source="footer" />
             <p className="mt-4 text-[13px] text-white/70">We will only email you about HealFitMe.</p>
           </div>
         </Reveal>
@@ -33,7 +33,7 @@ export async function Footer() {
             <p className="text-[26px] tracking-tight">Learn</p>
             <ul className="mt-4 space-y-2.5 text-[15px] text-white/85">
               <li><Link href="/product" className="hover:text-white">The app</Link></li>
-              <li><Link href="/coaches" className="hover:text-white">Coaches</Link></li>
+              <li><Link href="/coaches" className="hover:text-white">Sessions</Link></li>
               <li><Link href="/faq" className="hover:text-white">FAQ</Link></li>
             </ul>
           </nav>
@@ -42,7 +42,7 @@ export async function Footer() {
             <ul className="mt-4 space-y-2.5 text-[15px] text-white/85">
               <li><Link href="/privacy" className="hover:text-white">Privacy</Link></li>
               <li><Link href="/terms" className="hover:text-white">Terms</Link></li>
-              <li><a href="#waitlist" className="hover:text-white">Waitlist</a></li>
+              <li><a href="#waitlist" className="hover:text-white">Early testing</a></li>
             </ul>
           </nav>
           <div />

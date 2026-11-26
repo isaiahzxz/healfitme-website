@@ -13,13 +13,13 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://healfitme.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "HealFitMe | Know what recovery needs today",
+  title: "HealFitMe | Know how recovered you are, every morning",
   description:
-    "HealFitMe turns your health and activity data into a clearer picture of recovery, and one useful next step. Join the waitlist.",
+    "HealFitMe is an iPhone app for people who train. Get a Recovery score out of 100 each morning and one thing to do today. Join early testing.",
   openGraph: {
-    title: "HealFitMe | Know what recovery needs today",
+    title: "HealFitMe | Know how recovered you are, every morning",
     description:
-      "Your health and activity data, turned into a clearer picture of recovery and one useful next step.",
+      "A Recovery score out of 100 each morning and one thing to do today. Coming soon to iOS.",
     type: "website",
   },
 };

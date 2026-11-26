@@ -13,11 +13,11 @@ export default function Privacy() {
       <p className="mt-6 rounded-2xl bg-mist p-4 text-sm text-ink-soft">
         Draft placeholder. Replace with a policy reviewed by a lawyer before launch.
       </p>
-      <h2 className="mt-10 text-xl font-medium">Waitlist</h2>
+      <h2 className="mt-10 text-xl font-medium">Early testing signup</h2>
       <p className="mt-2 text-ink-soft">
-        When you join the waitlist we store your email address, and your first
-        name and goal if you share them. We use them only to contact you about
-        HealFitMe early access. Email us to have your details removed.
+        When you sign up for early testing we store your name, your email address
+        and where you heard about HealFitMe. We use them only to contact you
+        about HealFitMe early testing. Email us to have your details removed.
       </p>
     </main>
   );

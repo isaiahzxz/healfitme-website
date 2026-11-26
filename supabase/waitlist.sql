@@ -15,3 +15,7 @@ alter table public.waitlist enable row level security;
 -- The server role needs explicit privileges on new tables.
 grant usage on schema public to service_role;
 grant select, insert, update, delete on public.waitlist to service_role;
+
+-- Added later: where people heard about HealFitMe. Run this once if the table already exists.
+-- (first_name now holds the full name people type in.)
+alter table public.waitlist add column if not exists heard_from text;

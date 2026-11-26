@@ -1,20 +1,24 @@
-import { CardRail } from "@/components/CardRail";
+import { CheckIn } from "@/components/CheckIn";
+import { Clubs } from "@/components/Clubs";
 import { Faq } from "@/components/Faq";
-import { Guide } from "@/components/Guide";
 import { Hero } from "@/components/Hero";
-import { Intro } from "@/components/Intro";
-import { Plan } from "@/components/Plan";
-import { Sessions } from "@/components/Sessions";
+import { Roadmap } from "@/components/Roadmap";
+import { Score } from "@/components/Score";
+import { Screens } from "@/components/Screens";
+import { Showcase } from "@/components/Showcase";
+import { Trust } from "@/components/Trust";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <Intro />
-      <CardRail />
-      <Guide />
-      <Plan />
-      <Sessions />
+      <Showcase />
+      <CheckIn />
+      <Roadmap />
+      <Score />
+      <Screens />
+      <Clubs />
+      <Trust />
       <Faq />
     </main>
   );

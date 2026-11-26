@@ -1,9 +1,14 @@
-export const GOALS = [
-  "Recover faster after workouts",
-  "Sleep and energy",
-  "Come back from an injury",
-  "Train smarter, not harder",
-  "Just curious",
+/** Where people say they heard about HealFitMe. "Other" lets them type their own answer. */
+export const HEARD_FROM = [
+  "Instagram",
+  "TikTok",
+  "YouTube",
+  "X (Twitter)",
+  "Reddit",
+  "Friend or family",
+  "Coach or gym",
+  "Google search",
+  "Other",
 ] as const;
 
-export type Goal = (typeof GOALS)[number];
+export type HeardFrom = (typeof HEARD_FROM)[number];
