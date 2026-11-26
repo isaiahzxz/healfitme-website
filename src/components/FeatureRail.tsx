@@ -5,10 +5,10 @@ import { useRef, useState } from "react";
 
 const CARDS = [
   { img: "/images/coach-breath.webp", t: "Check in", d: "Five quick questions each morning about sleep, soreness, energy, pain and the time you have." },
-  { img: "/images/hero.webp", t: "Know your score", d: "A Recovery score out of 100 from a fixed formula. The same answers always give the same number." },
+  { img: "/images/yoga-pink.webp", t: "Know your score", d: "A Recovery score out of 100 from a fixed formula. The same answers always give the same number." },
   { img: "/images/mobility.webp", t: "Do one thing", d: "One coach video chosen for your score, your body and your time, with the reason it was picked." },
   { img: "/images/watch.webp", t: "Bring your wearable", d: "Optional. Apple Watch, WHOOP, Oura and Garmin can share sleep, HRV and steps through Apple Health." },
-  { img: "/images/group.webp", t: "Train together", d: "Join a club for how you train and take on a weekly challenge with other members." },
+  { img: "/images/coach-stretch.webp", t: "Train together", d: "Join a club for how you train and take on a weekly challenge with other members." },
 ];
 
 export function FeatureRail() {

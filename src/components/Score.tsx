@@ -10,10 +10,11 @@ const PARTS = [
   { t: "Wearable data, if you connect it", d: "Measured sleep replaces your answer, and 8,000 or more steps add a little." },
 ];
 
-export function Score() {
+/** `photo` is off on /product so the same stock photo never appears on two pages. */
+export function Score({ photo = true }: { photo?: boolean }) {
   return (
     <section className="bg-navy px-6 py-24 text-white md:py-32">
-      <div className="mx-auto grid max-w-[1200px] items-center gap-16 lg:grid-cols-[1.1fr_0.8fr] lg:gap-24">
+      <div className={`mx-auto grid max-w-[1200px] items-center gap-16 lg:gap-24 ${photo ? "lg:grid-cols-[1.1fr_0.8fr]" : ""}`}>
         <div>
           <Reveal>
             <h2 className="display max-w-[640px] text-[clamp(2.1rem,4.4vw,3.4rem)]">
@@ -41,6 +42,7 @@ export function Score() {
           </Reveal>
         </div>
 
+        {photo && (
         <Reveal delay={100}>
           <div className="relative mx-auto aspect-[4/5] w-full max-w-[440px] overflow-hidden rounded-[32px]">
             <Image
@@ -52,6 +54,7 @@ export function Score() {
             />
           </div>
         </Reveal>
+        )}
       </div>
     </section>
   );
