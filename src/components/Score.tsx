@@ -42,16 +42,14 @@ export function Score() {
         </div>
 
         <Reveal delay={100}>
-          <div className="mx-auto w-full max-w-[320px] rounded-[3rem] bg-[#0b1226] p-[9px] shadow-[0_60px_120px_-30px_rgba(0,0,0,0.7)] ring-1 ring-white/20">
-            <div className="relative aspect-[780/1688] overflow-hidden rounded-[2.4rem]">
-              <Image
-                src="/images/app/home-after.webp"
-                alt="The HealFitMe home screen showing a Recovery score of 83 out of 100, rated Good, with today's mission"
-                fill
-                sizes="320px"
-                className="object-cover object-top"
-              />
-            </div>
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-[440px] overflow-hidden rounded-[32px]">
+            <Image
+              src="/images/coach-gym.webp"
+              alt="A coach guiding a member through a stretch in the gym"
+              fill
+              sizes="440px"
+              className="object-cover"
+            />
           </div>
         </Reveal>
       </div>

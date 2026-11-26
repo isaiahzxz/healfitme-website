@@ -1,46 +1,43 @@
 import Image from "next/image";
 import { Reveal } from "./Reveal";
 
-const STEPS = [
-  { src: "/images/app/intro-1.webp", t: "About you", d: "Your first name, and the month and year you were born. You must be 18 or older, and we keep only the month and year." },
-  { src: "/images/app/intro-5.webp", t: "Your time", d: "How long you can give recovery each day. We never pick a session longer than this." },
-  { src: "/images/app/intro-8.webp", t: "Your health data", d: "Optional. Connect Apple Health, so an Apple Watch, WHOOP, Oura or Garmin can share sleep, HRV, resting heart rate and steps." },
+const CARDS = [
+  { t: "Training", items: ["The activities you do", "The days you train"] },
+  { t: "Goal", items: ["What you want from recovery"] },
+  { t: "Time", items: ["Minutes a day for recovery", "Never a longer session than that"] },
+  { t: "Injuries", items: ["Areas to go easy on"] },
+  { t: "Kit", items: ["What you have at home or at the gym"] },
+  { t: "Health data", items: ["Optional, through Apple Health", "Sleep, HRV, heart rate, steps"] },
 ];
 
 export function Roadmap() {
   return (
-    <section className="relative isolate overflow-hidden bg-navy px-6 py-24 text-white md:py-32">
+    <section className="relative isolate overflow-hidden bg-navy px-4 py-24 text-white md:px-6 md:py-32">
       <Image src="/images/plan.webp" alt="" fill sizes="100vw" className="-z-20 object-cover" />
-      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-navy/80" />
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(15,26,56,0.55),rgba(15,26,56,0.85))]" />
       <div className="mx-auto max-w-[1200px]">
         <Reveal>
-          <h2 className="display max-w-[760px] text-[clamp(2.1rem,4.4vw,3.4rem)]">
-            A plan that starts from your answers
+          <h2 className="display mx-auto max-w-[640px] text-center text-[clamp(2.1rem,4.4vw,3.4rem)]">
+            A plan that fits your body and your day
           </h2>
-          <p className="mt-5 max-w-xl text-[18px] text-white/80">
-            The first-run setup takes about a minute. It also asks about your activities and training days, your
-            goal, injuries and the kit you have, and your reminders. There is no starting score: your first
-            check-in gives it.
+          <p className="mx-auto mt-5 max-w-xl text-center text-[18px] text-white/85">
+            Setup takes about a minute. Your answers shape every mission, and you can change them any time.
           </p>
         </Reveal>
 
-        <ul className="mt-14 grid gap-6 md:grid-cols-3 md:gap-8">
-          {STEPS.map((s, i) => (
-            <Reveal key={s.t} delay={i * 90}>
-              <li className="h-full rounded-[32px] bg-white p-3 text-ink">
-                <div className="relative aspect-[780/1100] overflow-hidden rounded-[22px] bg-sky-2">
-                  <Image
-                    src={s.src}
-                    alt={`HealFitMe setup screen: ${s.t}`}
-                    fill
-                    sizes="(min-width:768px) 360px, 90vw"
-                    className="object-cover object-top"
-                  />
-                </div>
-                <div className="px-3 pb-3 pt-5">
-                  <h3 className="text-[1.5rem] leading-[1.15] tracking-tight">{s.t}</h3>
-                  <p className="mt-2 text-[15px] leading-snug text-ink-soft">{s.d}</p>
-                </div>
+        <ul className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {CARDS.map((c, i) => (
+            <Reveal key={c.t} delay={i * 60}>
+              <li className="h-full rounded-[32px] bg-white/10 p-7 ring-1 ring-white/15 backdrop-blur-md">
+                <h3 className="text-[1.5rem] leading-[1.1] tracking-tight">{c.t}</h3>
+                <ul className="mt-4 space-y-1.5 text-[16px] text-white/85">
+                  {c.items.map((it) => (
+                    <li key={it} className="flex gap-2.5">
+                      <span aria-hidden="true" className="text-white/50">+</span>
+                      {it}
+                    </li>
+                  ))}
+                </ul>
               </li>
             </Reveal>
           ))}
