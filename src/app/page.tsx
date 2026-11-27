@@ -1,5 +1,4 @@
-import { CheckIn } from "@/components/CheckIn";
-import { Clubs } from "@/components/Clubs";
+import { ClubShare } from "@/components/ClubShare";
 import { Faq } from "@/components/Faq";
 import { Hero } from "@/components/Hero";
 import { Roadmap } from "@/components/Roadmap";
@@ -12,10 +11,9 @@ export default function Home() {
     <main>
       <Hero />
       <Showcase />
-      <CheckIn />
+      <ClubShare />
       <Roadmap />
       <Score />
-      <Clubs />
       <Trust />
       <Faq />
     </main>

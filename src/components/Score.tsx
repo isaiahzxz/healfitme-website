@@ -13,14 +13,14 @@ const PARTS = [
 /** `photo` is off on /product so the same stock photo never appears on two pages. */
 export function Score({ photo = true }: { photo?: boolean }) {
   return (
-    <section className="bg-navy px-6 py-24 text-white md:py-32">
+    <section className="bg-white px-6 py-24 text-ink md:py-32">
       <div className={`mx-auto grid max-w-[1200px] items-center gap-16 lg:gap-24 ${photo ? "lg:grid-cols-[1.1fr_0.8fr]" : ""}`}>
         <div>
           <Reveal>
             <h2 className="display max-w-[640px] text-[clamp(2.1rem,4.4vw,3.4rem)]">
               A score you can check, not a black box
             </h2>
-            <p className="mt-5 max-w-xl text-[18px] text-white/80">
+            <p className="mt-5 max-w-xl text-[18px] text-ink-soft">
               Your Recovery score is a fixed formula. It is never decided by AI, so the same answers always give
               the same number. What helps recovery earns points, and too much costs them.
             </p>
@@ -28,15 +28,15 @@ export function Score({ photo = true }: { photo?: boolean }) {
           <ul className="mt-12 grid gap-4 sm:grid-cols-2">
             {PARTS.map((p, i) => (
               <Reveal key={p.t} delay={i * 60}>
-                <li className="h-full rounded-[28px] bg-navy-2 p-7">
+                <li className="h-full rounded-[28px] bg-sky-2 p-7">
                   <h3 className="text-[1.3rem] leading-[1.15] tracking-tight">{p.t}</h3>
-                  <p className="mt-2.5 text-[15px] leading-snug text-white/70">{p.d}</p>
+                  <p className="mt-2.5 text-[15px] leading-snug text-ink-soft">{p.d}</p>
                 </li>
               </Reveal>
             ))}
           </ul>
           <Reveal>
-            <p className="mt-8 max-w-xl text-[15px] text-white/60">
+            <p className="mt-8 max-w-xl text-[15px] text-ink-soft">
               Weight, calories, meals and free text never change the score.
             </p>
           </Reveal>

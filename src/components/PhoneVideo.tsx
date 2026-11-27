@@ -12,7 +12,7 @@ export function PhoneVideo({
   label,
   className = "",
 }: {
-  name: "app-walkthrough" | "check-in";
+  name: "app-walkthrough";
   poster: string;
   label: string;
   className?: string;
