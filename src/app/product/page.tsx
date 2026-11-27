@@ -141,7 +141,7 @@ export default function ProductPage() {
         </div>
       </section>
 
-      <Score photo={false} />
+      <Score />
       <Trust />
 
       <section className="bg-sky-2 px-6 py-16">

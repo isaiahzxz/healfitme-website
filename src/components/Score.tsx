@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Reveal } from "./Reveal";
 
 const PARTS = [
@@ -10,11 +9,10 @@ const PARTS = [
   { t: "Wearable data, if you connect it", d: "Measured sleep replaces your answer, and 8,000 or more steps add a little." },
 ];
 
-/** `photo` is off on /product so the same stock photo never appears on two pages. */
-export function Score({ photo = true }: { photo?: boolean }) {
+export function Score() {
   return (
     <section className="bg-white px-6 py-24 text-ink md:py-32">
-      <div className={`mx-auto grid max-w-[1200px] items-center gap-16 lg:gap-24 ${photo ? "lg:grid-cols-[1.1fr_0.8fr]" : ""}`}>
+      <div className="mx-auto max-w-[1200px]">
         <div>
           <Reveal>
             <h2 className="display max-w-[640px] text-[clamp(2.1rem,4.4vw,3.4rem)]">
@@ -42,19 +40,6 @@ export function Score({ photo = true }: { photo?: boolean }) {
           </Reveal>
         </div>
 
-        {photo && (
-        <Reveal delay={100}>
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-[440px] overflow-hidden rounded-[32px]">
-            <Image
-              src="/images/coach-gym.webp"
-              alt="A coach guiding a member through a stretch in the gym"
-              fill
-              sizes="440px"
-              className="object-cover"
-            />
-          </div>
-        </Reveal>
-        )}
       </div>
     </section>
   );
