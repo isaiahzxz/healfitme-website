@@ -27,17 +27,17 @@ export function FeatureRail() {
       <ul
         ref={rail}
         onScroll={onScroll}
-        className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 [scrollbar-width:none] md:mx-0 md:px-0 [&::-webkit-scrollbar]:hidden"
+        className="flex snap-x snap-mandatory scroll-pl-[max(1rem,calc((100vw-1200px)/2))] gap-5 overflow-x-auto px-[max(1rem,calc((100vw-1200px)/2))] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
         {CARDS.map((c) => (
-          <li key={c.t} className="w-[300px] shrink-0 snap-start sm:w-[360px]">
-            <div className="h-full overflow-hidden rounded-[32px] bg-[#1c1d1c]">
-              <div className="relative aspect-[4/3.4]">
-                <Image src={c.img} alt="" fill sizes="360px" className="object-cover" />
+          <li key={c.t} className="w-[86vw] max-w-[560px] shrink-0 snap-start sm:w-[480px] lg:w-[540px]">
+            <div className="h-full overflow-hidden rounded-[36px] bg-[#1c1d1c]">
+              <div className="relative aspect-[5/4.4]">
+                <Image src={c.img} alt="" fill sizes="(min-width:1024px) 540px, 86vw" className="object-cover" />
               </div>
-              <div className="p-7">
-                <h3 className="text-[1.5rem] leading-[1.15] tracking-[-0.3px] lg:text-[1.75rem]">{c.t}</h3>
-                <p className="mt-3 text-[16px] leading-snug text-white/70">{c.d}</p>
+              <div className="p-8 md:p-10">
+                <h3 className="text-[1.75rem] leading-[1.1] tracking-[-0.5px] lg:text-[2.25rem]">{c.t}</h3>
+                <p className="mt-4 text-[17px] leading-snug text-white/70 lg:text-[19px]">{c.d}</p>
               </div>
             </div>
           </li>
@@ -48,7 +48,7 @@ export function FeatureRail() {
           <button
             key={d}
             type="button"
-            onClick={() => rail.current?.scrollBy({ left: d * 380, behavior: "smooth" })}
+            onClick={() => rail.current?.scrollBy({ left: d * 560, behavior: "smooth" })}
             disabled={(d === -1 && edge === "start") || (d === 1 && edge === "end")}
             aria-label={d === -1 ? "Previous" : "Next"}
             className="grid h-12 w-12 place-items-center rounded-full bg-white/10 text-white transition hover:bg-white/20 disabled:opacity-30"

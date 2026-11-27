@@ -24,9 +24,9 @@ export function Showcase() {
           </div>
         </Reveal>
 
-        <div className="mt-16">
-          <FeatureRail />
-        </div>
+      </div>
+      <div className="-mx-4 mt-16 md:-mx-6">
+        <FeatureRail />
       </div>
     </section>
   );
