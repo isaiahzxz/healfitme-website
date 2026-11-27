@@ -53,10 +53,7 @@ export function Roadmap() {
             <span className="grid h-16 w-16 place-items-center rounded-full bg-white font-serif text-[1.9rem] text-ink shadow-lg">
               S
             </span>
-            <span>
-              <span className="block text-[1.9rem] leading-none tracking-tight">Sam</span>
-              <span className="mt-1.5 block text-[15px] text-white/75">Example profile</span>
-            </span>
+            <span className="text-[1.9rem] leading-none tracking-tight">Sam</span>
           </Reveal>
 
           <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
