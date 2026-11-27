@@ -53,7 +53,7 @@ export default function FaqPage() {
           <p className="display text-[clamp(1.75rem,3.6vw,2.5rem)]">Want to see it for yourself?</p>
           <div className="flex flex-wrap gap-x-8 gap-y-3">
             <ArrowLink href="/product">Look inside the app</ArrowLink>
-            <ArrowLink href="/coaches">See the guided sessions</ArrowLink>
+            <ArrowLink href="/sessions">See the guided sessions</ArrowLink>
           </div>
         </Reveal>
       </section>

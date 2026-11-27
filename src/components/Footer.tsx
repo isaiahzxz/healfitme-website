@@ -33,7 +33,7 @@ export async function Footer() {
             <p className="text-[26px] tracking-tight">Learn</p>
             <ul className="mt-4 space-y-2.5 text-[15px] text-white/85">
               <li><Link href="/product" className="hover:text-white">The app</Link></li>
-              <li><Link href="/coaches" className="hover:text-white">Sessions</Link></li>
+              <li><Link href="/sessions" className="hover:text-white">Sessions</Link></li>
               <li><Link href="/faq" className="hover:text-white">FAQ</Link></li>
             </ul>
           </nav>

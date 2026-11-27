@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const LINKS = [
   { href: "/product", label: "The app" },
-  { href: "/coaches", label: "Sessions" },
+  { href: "/sessions", label: "Sessions" },
   { href: "/faq", label: "FAQ" },
 ];
 
@@ -25,7 +25,9 @@ export function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const dark = !solid && !open;
+  // Pages with a light top (no photo or dark hero) need the solid bar from the start.
+  const lightTop = pathname.startsWith("/sessions");
+  const dark = !solid && !open && !lightTop;
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       <a
@@ -39,7 +41,7 @@ export function Nav() {
       <nav
         aria-label="Main"
         className={`flex items-center justify-between px-5 md:grid md:grid-cols-[1fr_auto_1fr] py-3 transition-colors duration-500 md:px-10 ${
-          solid ? "bg-white text-ink" : "text-white"
+          solid || lightTop ? "bg-white text-ink" : "text-white"
         }`}
       >
         {/* The mark sits in the far left corner, the word "HealFitMe" in the center (side by side on phones). */}
@@ -82,7 +84,7 @@ export function Nav() {
           <a
             href="#waitlist"
             className={`whitespace-nowrap rounded-[14px] px-5 py-3 text-[15px] transition ${
-              solid ? "bg-navy text-white hover:bg-navy-2" : "bg-white/95 text-ink hover:bg-white"
+              solid || lightTop ? "bg-navy text-white hover:bg-navy-2" : "bg-white/95 text-ink hover:bg-white"
             }`}
           >
             <span className="sm:hidden">Join</span>
