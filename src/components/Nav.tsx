@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Logo } from "./Logo";
+import Image from "next/image";
 
 const LINKS = [
   { href: "/product", label: "The app" },
@@ -42,12 +42,27 @@ export function Nav() {
           solid ? "bg-white text-ink" : "text-white"
         }`}
       >
-        <div className="hidden md:block" />
-        <Link href="/" aria-label="HealFitMe home" className="justify-self-start md:justify-self-center">
-          <Logo light={dark} />
+        {/* The mark sits in the far left corner, the word "HealFitMe" in the center (side by side on phones). */}
+        <Link href="/" aria-label="HealFitMe home" className="flex items-center gap-2 justify-self-start md:contents">
+          <Image
+            src="/images/logo-mark.png"
+            alt=""
+            width={231}
+            height={114}
+            preload
+            className={`h-[18px] w-auto justify-self-start md:col-start-1 ${dark ? "brightness-0 invert" : ""}`}
+          />
+          <Image
+            src="/images/logo-word.png"
+            alt=""
+            width={713}
+            height={114}
+            preload
+            className={`h-[18px] w-auto md:col-start-2 md:justify-self-center ${dark ? "brightness-0 invert" : ""}`}
+          />
         </Link>
 
-        <div className="flex items-center justify-self-end gap-1 md:gap-8">
+        <div className="flex items-center justify-self-end gap-1 md:col-start-3 md:gap-8">
           <ul className="hidden items-center gap-8 text-[16px] md:flex">
             {LINKS.map((l) => {
               const active = pathname === l.href;
