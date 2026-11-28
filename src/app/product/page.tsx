@@ -61,10 +61,11 @@ const AREAS: Area[] = [
   {
     id: "club",
     title: "Club",
-    body: "One club at a time. Join, switch (with a confirm) or leave. Each club shows its posts and its weekly challenge. The clubs are Runners, Athletes, Gym & Strength, Office workers, Students, and Adventurers & travelers.",
+    body: "Pick one club at a time: Runners, Athletes, Gym & Strength, Office Workers, Students, or Adventurers & Travelers. Inside your club you see members' streaks, share your progress, and react to each other's posts. Club options let you turn on club alerts, invite people, switch to another club or leave.",
     shots: [
-      { src: "club", alt: "The Club tab with the Runners club" },
-      { src: "club-runners", alt: "The Runners club page with this week's challenge" },
+      { src: "club-none", alt: "The Club tab before joining, with all clubs to choose from" },
+      { src: "club-joined", alt: "The Gym & Strength club feed with members' streaks and a shared session" },
+      { src: "club-options", alt: "Club options: club alerts, invite people, switch club or leave" },
     ],
   },
   {

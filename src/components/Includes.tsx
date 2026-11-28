@@ -30,10 +30,10 @@ const ITEMS = [
     alt: "The Stats screen with a 12-day streak, the Recovery trend and sleep",
   },
   {
-    t: "Clubs and weekly challenges",
-    d: "Join a club for how you train: Runners, Athletes, Gym & Strength, Office workers, Students, or Adventurers & travelers. Share your progress and take on a challenge together.",
-    src: "club",
-    alt: "The Club tab showing the Runners club and its weekly challenge",
+    t: "Clubs, streaks and reactions",
+    d: "Join a club for how you train: Runners, Athletes, Gym & Strength, Office workers, Students, or Adventurers & travelers. See each other's streaks, share your progress and react to each other's posts.",
+    src: "club-joined",
+    alt: "The Gym & Strength club feed with members' streaks and Maya's finished session",
   },
   {
     t: "Works with your wearable",

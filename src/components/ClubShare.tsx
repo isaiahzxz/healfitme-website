@@ -20,8 +20,8 @@ export function ClubShare() {
             <RotatingWord words={WHO} />
           </h2>
           <p className="mx-auto mt-6 max-w-[560px] text-center text-[18px] text-white/75">
-            Share your finished sessions, cheer each other on, and take on a weekly challenge together. One club
-            at a time, and you can switch whenever you like.
+            Share your finished sessions, keep your streak going and react to each other&apos;s posts. One club at
+            a time, and you can switch whenever you like.
           </p>
         </Reveal>
 
@@ -30,8 +30,8 @@ export function ClubShare() {
           <div className="relative -mb-24 rounded-[3.2rem] bg-[#2a2c30] p-[10px] shadow-[0_0_0_1px_rgba(255,255,255,0.12)] md:-mb-32">
             <div className="relative aspect-[780/1688] overflow-hidden rounded-[2.6rem] bg-sky-2">
               <Image
-                src="/images/app/club-runners.webp"
-                alt="The Runners club in HealFitMe, with this week's challenge of three recovery sessions"
+                src="/images/app/club-joined.webp"
+                alt="The Gym & Strength club feed in HealFitMe, with members' streaks and Maya's finished session"
                 fill
                 sizes="340px"
                 className="object-cover object-top"
@@ -41,9 +41,9 @@ export function ClubShare() {
 
           <div className="absolute left-1/2 top-[52%] w-[min(88vw,330px)] -translate-x-1/2 md:left-[72%] md:top-[30%] md:w-[370px] md:translate-x-0">
             <div className="rounded-[26px] bg-[#2b2c2e]/95 px-6 py-5 shadow-2xl ring-1 ring-white/10 backdrop-blur">
-              <p className="text-[13px] text-white/55">Maya · Runners club</p>
+              <p className="text-[13px] text-white/55">Jordan · Gym &amp; Strength</p>
               <p className="mt-1.5 text-[19px] leading-snug">
-                Nice session, Sam! Two more and the club hits this week&apos;s challenge 💪
+                Nice work, Maya! 9 days in a row 🔥 See you at the next one 💪
               </p>
             </div>
           </div>
