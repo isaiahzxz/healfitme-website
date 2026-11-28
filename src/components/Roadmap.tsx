@@ -14,13 +14,17 @@ const CARDS = [
 export function Roadmap() {
   return (
     <section className="relative isolate overflow-hidden bg-[#2b2b2d] px-4 pb-24 pt-24 text-white md:px-6 md:pb-28 md:pt-28">
-      <Image
-        src="/images/roadmap.webp"
-        alt=""
-        fill
-        sizes="100vw"
-        className="-z-20 -scale-x-100 object-cover object-[40%_35%] grayscale-[65%]"
-      />
+      {/* Phones: the photo fills only the top of the section and fades into the background, so it isn't blown up. */}
+      <div aria-hidden="true" className="absolute inset-x-0 top-0 -z-20 h-[640px] md:inset-0 md:h-auto">
+        <Image
+          src="/images/roadmap.webp"
+          alt=""
+          fill
+          sizes="100vw"
+          className="-scale-x-100 object-cover object-[30%_30%] grayscale-[65%] md:object-[40%_35%]"
+        />
+        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-[linear-gradient(180deg,transparent,#2b2b2d)] md:hidden" />
+      </div>
       {/* Dark at the top for the heading, warm and lavender washes at the bottom, like future.co */}
       <div
         aria-hidden="true"

@@ -13,10 +13,13 @@ export async function Footer() {
   const year = await currentYear();
   return (
     <footer id="waitlist" className="relative isolate overflow-hidden bg-navy text-white">
-      <Image src="/images/reset.webp" alt="" fill sizes="100vw" className="-z-20 object-cover" />
-      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(15,26,56,0.55)_0%,rgba(15,26,56,0.7)_55%,rgba(15,26,56,0.92)_100%)]" />
+      {/* Phones: the photo sits at a normal size at the top and fades into navy, instead of being blown up to fill a tall footer. */}
+      <div aria-hidden="true" className="absolute inset-x-0 top-0 -z-20 h-[560px] md:inset-0 md:h-auto">
+        <Image src="/images/reset.webp" alt="" fill sizes="100vw" className="object-cover object-[50%_30%]" />
+      </div>
+      <div aria-hidden="true" className="absolute inset-x-0 top-0 -z-10 h-[560px] bg-[linear-gradient(180deg,rgba(15,26,56,0.35)_0%,rgba(15,26,56,0.6)_60%,#0f1a38_100%)] md:inset-0 md:h-auto md:bg-[linear-gradient(180deg,rgba(15,26,56,0.55)_0%,rgba(15,26,56,0.7)_55%,rgba(15,26,56,0.92)_100%)]" />
 
-      <div className="mx-auto flex min-h-[900px] max-w-[1200px] flex-col justify-end px-6 pb-8 pt-40">
+      <div className="mx-auto flex max-w-[1200px] flex-col justify-end px-6 pb-8 pt-64 md:min-h-[900px] md:pt-40">
         <Reveal>
           <h2 className="display text-[clamp(3rem,9vw,8rem)] leading-[0.95]">Join early testing</h2>
           <p className="mt-5 max-w-lg text-[18px] text-white/85">
