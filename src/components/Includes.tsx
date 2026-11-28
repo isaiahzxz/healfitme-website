@@ -6,16 +6,10 @@ import { Reveal } from "./Reveal";
 
 const ITEMS = [
   {
-    t: "A Recovery score every morning",
-    d: "A number from 0 to 100 from a fixed formula, never AI. Sleep, soreness, energy, training and finished sessions all count, so the same answers always give the same score.",
+    t: "A check-in and a Recovery score",
+    d: "Five quick questions each morning about sleep, soreness, energy, pain and your time. You get a score from 0 to 100 from a fixed formula, never AI, so the same answers always give the same number.",
     src: "home-after",
     alt: "HealFitMe home screen with a Recovery score of 83 out of 100 and today's mission",
-  },
-  {
-    t: "A five-question check-in",
-    d: "Sleep, soreness, energy, pain and the time you have. Tap a dot, tap Next, and your score and mission are ready.",
-    src: "checkin-1",
-    alt: "The first check-in question: how many hours did you sleep?",
   },
   {
     t: "One mission a day",
@@ -24,22 +18,16 @@ const ITEMS = [
     alt: "Mission preview: Hips, back and neck reset, 10 minutes, beginner, with coach Maya",
   },
   {
-    t: "Stats that show the trend",
-    d: "Your Recovery trend, streak, sleep, steps, active minutes, training load and missions done, week by week.",
+    t: "Stats, with or without a wearable",
+    d: "Your Recovery trend, streak, sleep, steps, training load and missions done, week by week. Connect an Apple Watch, WHOOP, Oura or Garmin through Apple Health for more.",
     src: "stats",
     alt: "The Stats screen with a 12-day streak, the Recovery trend and sleep",
   },
   {
     t: "Clubs, streaks and reactions",
-    d: "Join a club for how you train: Runners, Athletes, Gym & Strength, Office workers, Students, or Adventurers & travelers. See each other's streaks, share your progress and react to each other's posts.",
+    d: "Join a club for how you train: Runners, Athletes, Gym & Strength, Office workers, Students, or Adventurers & travelers. See each other's streaks, share your progress and react to posts.",
     src: "club-joined",
     alt: "The Gym & Strength club feed with members' streaks and Maya's finished session",
-  },
-  {
-    t: "Works with your wearable",
-    d: "Optional. Through Apple Health, an Apple Watch, WHOOP, Oura or Garmin can share sleep, HRV, resting heart rate and steps.",
-    src: "intro-8",
-    alt: "Setup screen for adding health data from Apple Watch, WHOOP, Oura or Garmin",
   },
 ] as const;
 
