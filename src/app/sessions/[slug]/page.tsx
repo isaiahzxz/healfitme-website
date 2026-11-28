@@ -78,7 +78,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
             {c.faqs.map((f) => (
               <details
                 key={f.q}
-                className="group rounded-[28px] bg-[#f8f8f8] px-8 py-6 shadow-[0_14px_30px_-24px_rgba(0,0,0,0.35)] ring-1 ring-black/[0.04]"
+                className="faq-item group rounded-[28px] bg-[#f8f8f8] px-8 py-6 shadow-[0_14px_30px_-24px_rgba(0,0,0,0.35)] ring-1 ring-black/[0.04]"
               >
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-[18px] [&::-webkit-details-marker]:hidden">
                   {f.q}
@@ -97,7 +97,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                     <path d="M4 7l5 5 5-5" />
                   </svg>
                 </summary>
-                <p className="mt-4 max-w-[760px] text-[17px] leading-relaxed text-ink-soft">{f.a}</p>
+                <p className="faq-answer mt-4 max-w-[760px] text-[17px] leading-relaxed text-ink-soft">{f.a}</p>
               </details>
             ))}
           </div>

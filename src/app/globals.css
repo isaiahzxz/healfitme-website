@@ -183,3 +183,27 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .marquee-track { animation: none; }
 }
+
+/* FAQ answers: a short slide-and-fade when a question opens */
+@keyframes faq-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: none; }
+}
+details[open] > .faq-answer,
+.faq-answer-open {
+  animation: faq-in 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+/* Smooth height on browsers that support it (Chrome, Edge) */
+@supports (interpolate-size: allow-keywords) {
+  details.faq-item { interpolate-size: allow-keywords; }
+  details.faq-item::details-content {
+    height: 0;
+    overflow: clip;
+    transition: height 0.35s cubic-bezier(0.16, 1, 0.3, 1), content-visibility 0.35s allow-discrete;
+  }
+  details.faq-item[open]::details-content { height: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  details[open] > .faq-answer, .faq-answer-open { animation: none; }
+  details.faq-item::details-content { transition: none; }
+}

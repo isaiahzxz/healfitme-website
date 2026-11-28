@@ -106,12 +106,12 @@ export function FaqExplorer() {
                 <div
                   id={`faq-${f.id}`}
                   role="region"
-                  className={`grid transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                  className={`grid transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none ${
                     isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="max-w-2xl pb-6 text-[17px] leading-relaxed text-ink-soft">
+                    <p className={`max-w-2xl pb-6 text-[17px] leading-relaxed text-ink-soft ${isOpen ? "faq-answer-open" : ""}`}>
                       {f.a}
                     </p>
                   </div>
