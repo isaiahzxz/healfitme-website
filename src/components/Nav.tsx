@@ -26,7 +26,7 @@ export function Nav() {
   }, []);
 
   // Pages with a light top (no photo or dark hero) need the solid bar from the start.
-  const lightTop = pathname.startsWith("/sessions");
+  const lightTop = ["/sessions", "/privacy", "/terms"].some((p) => pathname.startsWith(p));
   const dark = !solid && !open && !lightTop;
   return (
     <header className="fixed inset-x-0 top-0 z-50">

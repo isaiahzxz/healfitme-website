@@ -111,11 +111,15 @@ export default function ProductPage() {
                   <p className="mt-5 max-w-xl text-[17px] leading-relaxed text-ink-soft">{a.body}</p>
                 </div>
                 {a.shots.length > 0 && (
-                  <div className={`flex justify-center gap-4 ${i % 2 ? "md:order-1" : ""}`}>
+                  <div
+                    className={`-mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-2 [scrollbar-width:none] md:mx-0 md:justify-center md:overflow-visible md:px-0 md:pb-0 [&::-webkit-scrollbar]:hidden ${
+                      a.shots.length === 1 ? "justify-center" : ""
+                    } ${i % 2 ? "md:order-1" : ""}`}
+                  >
                     {a.shots.map((s) => (
                       <div
                         key={s.src}
-                        className="w-full max-w-[200px] flex-1 rounded-[26px] bg-ink p-[5px] shadow-[0_30px_60px_-30px_rgba(15,26,56,0.5)] first:max-w-[220px] only:max-w-[270px]"
+                        className="w-[62vw] max-w-[240px] shrink-0 snap-center rounded-[26px] bg-ink p-[5px] shadow-[0_30px_60px_-30px_rgba(15,26,56,0.5)] md:w-full md:max-w-[200px] md:flex-1 md:shrink md:first:max-w-[220px] md:only:max-w-[270px]"
                       >
                         <div className="relative aspect-[780/1688] overflow-hidden rounded-[21px] bg-sky-2">
                           <Image
